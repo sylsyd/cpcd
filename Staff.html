@@ -7,23 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <style>
-    @media screen and (max-width: 600px) {
-        .nav-bar {
-            flex-direction: column;
+.nav-toggle {
+            display: none;
         }
 
-        .nav-bar a {
-            display: block;
-            padding: 10px 2px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            line-height: 2;
+        #nav-links {
+            display: flex;
         }
 
-        .nav-bar a:last-child {
-            border-bottom: none;
-        }
+        @media screen and (max-width: 600px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+            }
+
+            #nav-links a {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            #nav-links a:last-child {
+        border-bottom: none; /* Removes border from the last link */
     }
+
+            #nav-links.show {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -32,14 +46,18 @@
     </div>
 
     <div class="nav-bar">
-        <a href="/">Home</a>
-        <a href="timetables.html">Timetables</a>
-        <a href="homework.html">Homework</a>
-        <a href="catchup.html">Catch Up Corner</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="resources.html">Resources</a>
-        <a href="bookings.html">Bookings</a>
-        <a href="staff.html">Staff</a>
+        <button class="nav-toggle" onclick="toggleNav()">Menu</button>
+        <div id="nav-links">
+            <a href="/">Home</a>
+            <a href="timetables.html">Timetables</a>
+            <a href="homework.html">Homework</a>
+            <a href="catchup.html">Catch Up Corner</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="staff.html">Staff</a>
+            <a href="resources.html">Resources</a>
+            <a href="bookings.html">Bookings</a>
+            
+        </div>
     </div>
 
     <div class="main-content">
@@ -96,7 +114,13 @@
     </div>
 
     </div>
-    
+
+    <script>
+            function toggleNav() {
+                var navLinks = document.getElementById('nav-links');
+                navLinks.classList.toggle('show');
+            }
+        </script>
     <script src="script.js"></script>
 
 </body>

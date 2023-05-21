@@ -24,6 +24,11 @@ body {
     text-align: center;
     padding: 14px 42px;
     text-decoration: none;
+    border-right: 1px solid #fff; /* adjust color as needed */
+}
+
+.nav-bar a:last-child {
+    border-right: none;
 }
 
 .nav-bar a:hover {
@@ -67,7 +72,21 @@ body:not(.main-page) {
     }
 
     .nav-bar {
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: auto; /* Add horizontal scrolling */
+    }
+
+    .nav-bar a {
+        float: none;
+        display: inline-block; /* Allows elements to sit side-by-side */
+        padding: 10px 2px;
+        text-align: center;
+        border-right: 1px solid #ddd; /* Re-add the border */
+        line-height: 2;
+    }
+
+    .nav-bar a:last-child {
+        border-right: none; /* Removes border from last element */
     }
 
     .main-content {
