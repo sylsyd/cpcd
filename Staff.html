@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Staff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+    @media screen and (max-width: 600px) {
+        .nav-bar {
+            flex-direction: column;
+        }
+
+        .nav-bar a {
+            display: block;
+            padding: 10px 2px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            line-height: 2;
+        }
+
+        .nav-bar a:last-child {
+            border-bottom: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Staff</h1>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/">Home</a>
+        <a href="timetables.html">Timetables</a>
+        <a href="homework.html">Homework</a>
+        <a href="catchup.html">Catch Up Corner</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="resources.html">Resources</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="staff.html">Staff</a>
+    </div>
+
+    <div class="main-content">
+    </div>
+    <div style="text-align: center;">
+        Click on our pictures to read a short bio.<br>
+        Click on our colleagues' pictures to access their email.
+    </div>
+    <div style="text-align: center;">
+        <img id="Syl" src="syl.png" alt="Bio" style="width:100%; max-width:150px; cursor: pointer;">
+        <div id="myTextBox" style="display: none; border: 1px solid black; padding: 10px; margin-top: 20px;">
+            Syl        
+        </div>
+        <img id="Lorene" src="lorene.png" alt="Second Bio" style="width:100%; max-width:150px; cursor: pointer;">
+    <div id="myTextBox2" style="display: none; border: 1px solid black; padding: 10px; margin-top: 20px;">
+        Test2
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 65px; background-color: white; padding: 10px; border-radius: 2px; ">
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Karen" src="karen.png" alt="Bio" style="width:100%; max-width:150px;">
+            <div style="font-size: 14px;">
+                Karen Chen, Mandarin Teacher, <a href="mailto:kchen@ifs.edu.sg">address@email.com</a>
+            </div>
+        </div>
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Ganyue" src="ganyue.png" alt="Bio" style="width:100%; max-width:150px;">
+            <div style="font-size: 14px;">
+                Ganyue Lei, Mandarin Teacher, <a href="mailto:glei@ifs.edu.sg">address@email.com</a>
+            </div>
+        </div>
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Omar" src="omar.png" alt="Bio" style="width:100%; max-width:150px;">
+            <div style="font-size: 14px;">
+                Omar Benyouceff, CPC PE Teacher, <a href="mailto:obenyouceff@ifs.edu.sg">address@email.com</a>
+            </div>
+        </div>
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Marko" src="marko.png" alt="Bio" style="width:100%; max-width:150px;">
+            <div style="font-size: 14px;">
+                Marko Sekulovski, CPD PE Teacher, <a href="mailto:msekulovski@ifs.edu.sg">address@email.com</a>
+            </div>
+        </div>
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Suresh" src="suresh.png" alt="Bio" style="width:100%; max-width:150px;">
+            <div style="font-size: 14px;">
+                Suresh Sandra, Music Teacher, <a href="mailto:schandra@ifs.edu.sg">address@email.com</a>
+            </div>
+        </div>
+        <!-- Repeat for other teachers -->
+    </div>
+    
+    <div class="footer">
+        <p>Contact us at <a href="mailto:smagnin@edu.sg">smagnin@edu.sg</a> and <a href="mailto:lcoilier@edu.sg">lcoilier@edu.sg</a></p>
+    </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
