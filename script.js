@@ -20,7 +20,7 @@ window.onload = function() {
     }
 
     // Password check code...
-    var password = "yourpassword";
+    var password = "ifs2023";
     
     // Check if password has already been entered during this session
     if (!sessionStorage.getItem("passwordEntered")) {
