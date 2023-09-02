@@ -1,6 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
-    background-image: url('background.png');
+    background-image: url('background3.png');
     background-size: cover; 
     background-repeat: no-repeat;
     
@@ -57,11 +57,11 @@ body {
 }
 
 body.main-page {
-    background-image: url('background.png');
+    background-image: url('background3.png');
 }
 
 body:not(.main-page) {
-    background-image: url('background2.png');
+    background-image: url('background3.png');
 }
 
 
