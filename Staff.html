@@ -60,63 +60,81 @@
         </div>
     </div>
 
-    <div class="main-content">
+    <div class="main-content" style="margin-top: 0;">
     </div>
-    <div style="text-align: center;">
+    <div style="text-align: center; background-color: white; border: 1px solid black; padding: 10px; margin-top: -40px;">
         Click on our pictures to read a short bio.<br>
         Click on our colleagues' pictures to access their email.
     </div>
-    <div style="text-align: center;">
-        <img id="Syl" src="syl.png" alt="Bio" style="width:100%; max-width:150px; cursor: pointer;">
-        <div id="myTextBox" style="display: none; border: 1px solid black; padding: 10px; margin-top: 20px;">
-            Syl        
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 65px; padding: 10px; border-radius: 2px;">
+        <!-- Syl -->
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Syl" onclick="showBio('Syl')" src="syl.png" alt="Bio" style="width:100%; max-width:150px; cursor: pointer;">
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+                Sylvain Magnin, English Teacher, <a href="mailto:smagnin@ifs.edu.sg">smagnin@ifs.edu.sg</a>
+            </div>
         </div>
-        <img id="Lorene" src="lorene.png" alt="Second Bio" style="width:100%; max-width:150px; cursor: pointer;">
-    <div id="myTextBox2" style="display: none; border: 1px solid black; padding: 10px; margin-top: 20px;">
-        Test2
-    </div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 65px; background-color: white; padding: 10px; border-radius: 2px; ">
+        <!-- Lorene -->
+        <div style="width: 150px; text-align: center; margin: 10px;">
+            <img id="Lorene" onclick="showBio('Lorene')" src="lorene.png" alt="Second Bio" style="width:100%; max-width:150px; cursor: pointer;">
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+                Lorene Coilier, French Teacher, <a href="mailto:lcoilier@ifs.edu.sg">lcoilier@ifs.edu.sg</a>
+            </div>
+        </div>
+        <!-- Karen -->
         <div style="width: 150px; text-align: center; margin: 10px;">
             <img id="Karen" src="karen.png" alt="Bio" style="width:100%; max-width:150px;">
-            <div style="font-size: 14px;">
-                Karen Chen, Mandarin Teacher, <a href="mailto:kchen@ifs.edu.sg">address@email.com</a>
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+                Karen Chen, Mandarin Teacher, <a href="mailto:kchen@ifs.edu.sg">kchen@ifs.edu.sg</a>
             </div>
         </div>
+        <!-- Ganyue -->
         <div style="width: 150px; text-align: center; margin: 10px;">
             <img id="Ganyue" src="ganyue.png" alt="Bio" style="width:100%; max-width:150px;">
-            <div style="font-size: 14px;">
-                 Mandarin Teacher, <a href="mailto:glei@ifs.edu.sg">address@email.com</a>
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+               Ganyue Lei, Mandarin Teacher, <a href="mailto:glei@ifs.edu.sg">glei@ifs.edu.sg</a>
             </div>
         </div>
+        <!-- Omar -->
         <div style="width: 150px; text-align: center; margin: 10px;">
             <img id="Omar" src="omar.png" alt="Bio" style="width:100%; max-width:150px;">
-            <div style="font-size: 14px;">
-                Omar Benyouceff, CPC PE Teacher, <a href="mailto:obenyouceff@ifs.edu.sg">address@email.com</a>
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+                Omar Benyouceff, PE Teacher, <a href="mailto:obenyouceff@ifs.edu.sg">obenyouceff@ifs.edu.sg</a>
             </div>
-        
         </div>
+        <!-- Suresh -->
         <div style="width: 150px; text-align: center; margin: 10px;">
             <img id="Suresh" src="suresh.png" alt="Bio" style="width:100%; max-width:150px;">
-            <div style="font-size: 14px;">
-                Suresh Sandra, Music Teacher, <a href="mailto:schandra@ifs.edu.sg">address@email.com</a>
+            <div style="font-size: 13px; background-color: white; padding: 5px; border: 1px solid black;">
+                Suresh Sandra, Music Teacher, <a href="mailto:schandra@ifs.edu.sg">schandra@ifs.edu.sg</a>
             </div>
         </div>
-        <!-- Repeat for other teachers -->
     </div>
     
-    <div class="footer">
-        <p>Contact us at <a href="mailto:smagnin@edu.sg">smagnin@edu.sg</a> and <a href="mailto:lcoilier@edu.sg">lcoilier@edu.sg</a></p>
-    </div>
-
-    </div>
-
-    <script>
+        
+        <div class="footer">
+            <p>Contact us at <a href="mailto:smagnin@edu.sg">smagnin@edu.sg</a> and <a href="mailto:lcoilier@edu.sg">lcoilier@edu.sg</a></p>
+        </div>
+        
+        </div>
+        
+        <script>
             function toggleNav() {
                 var navLinks = document.getElementById('nav-links');
                 navLinks.classList.toggle('show');
             }
+    
+            function showBio(name) {
+                var bioText = "";
+                if (name === "Syl") {
+                    bioText = "Syl is Australian but initially trained and qualified as a teacher in the UK. He started his career as an English teacher in Year 6 at Clare Middle School and went on to teach in the USA, Cambodia and was teaching Year 5 English in his hometown of Sydney, Australia before coming to Singapore in 2021.";
+                } else if (name === "Lorene") {
+                    bioText = "Lorène Coilier a enseigné pendant 5 ans en France dans différents niveaux de classe (CP, CE1, CM1, PS-MS) avant d’arriver à Singapour il y a un peu plus de 3 ans. Elle a commencé au lycée en tant que remplaçante et entame sa troisième année en CP Anglais +.";
+                }
+                window.alert(bioText);
+            }
         </script>
-    <script src="script.js"></script>
-
-</body>
-</html>
+        <script src="script.js"></script>
+        </body>
+        </html>
+        

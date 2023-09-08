@@ -1,6 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
-    background-image: url('background2.png');
+    background-image: url('backgroundifs.png');
     background-size: cover; 
     background-repeat: no-repeat;
     
@@ -38,7 +38,7 @@ body {
 
 .main-content {
     padding: 20px;
-    padding-right: 39%;  /* adjust this value as needed */
+    padding-right: 3%;  /* adjust this value as needed */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -57,11 +57,11 @@ body {
 }
 
 body.main-page {
-    background-image: url('background.png');
+    background-image: url('backgroundifs.png');
 }
 
 body:not(.main-page) {
-    background-image: url('background2.png');
+    background-image: url('backgroundifs.png');
 }
 
 
