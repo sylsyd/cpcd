@@ -177,3 +177,17 @@ body:not(.main-page) {
     height: auto;
     max-width: 100%;  /* This will make sure the image is not larger than the viewport */
 }
+
+.bottom1-image {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: -1;  /* This ensures the image stays behind your content */
+}
+.bottom1-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;  /* This will make sure the image is not larger than the viewport */
+}
