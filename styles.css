@@ -185,6 +185,8 @@ body:not(.main-page) {
     width: 100%;
     text-align: center;
     z-index: -1;  /* This ensures the image stays behind your content */
+    margin: 0;
+    padding: 0;
 }
 .bottom1-image img {
     width: auto;

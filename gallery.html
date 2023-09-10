@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="path/to/password-protect.js"></script>
     <style>
 
 .nav-toggle {
@@ -82,9 +81,10 @@
         Please click on the image below to access our Photo Gallery.
     </div>
     <div style="text-align: center;">
-        <a href="https://drive.google.com/drive/u/0/folders/1Cg0CiyoxKiyXuQdc6NtJQzK_keokM06v">
+        <a id="protected-link" href="javascript:void(0);">
             <img src="gallery329.png" alt="Homework" style="width:100%; max-width:1200px; cursor: pointer;">
         </a>
+    </div>
     </div>
     <div class="bottom-image">
         <img src="bottom.png" alt="Bottom Image">
@@ -95,6 +95,15 @@
             var navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('show');
         }
+
+        document.getElementById('protected-link').addEventListener('click', function() {
+        var password = prompt('Please enter the password:');
+        if(password === 'ifs2023') {
+            window.location.href = 'https://drive.google.com/drive/u/0/folders/1Cg0CiyoxKiyXuQdc6NtJQzK_keokM06v';
+        } else {
+            alert('Incorrect password');
+        }
+    });
     </script>
 
 </body>
