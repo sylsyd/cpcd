@@ -39,13 +39,29 @@
                 display: flex;
             }
         }
+
+    /* Default styling for larger screens */
+.header img {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    .header img {
+        width: 100%;  /* Adjust width as needed */
+        max-width: none;  /* Override the max-width for mobile */
+    }
+}
+    
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Gallery</h1>
+    <div class="header" style="margin: 0; padding: 0;">
+        <img src="banner.png" alt="Staff" style="width:100%; max-width:1600px; margin: 0; padding: 0;">
     </div>
-
     <div class="nav-bar">
         <button class="nav-toggle" onclick="toggleNav()">Menu</button>
         <div id="nav-links">
@@ -67,7 +83,7 @@
     </div>
     <div style="text-align: center;">
         <a href="https://drive.google.com/drive/u/0/folders/1Cg0CiyoxKiyXuQdc6NtJQzK_keokM06v">
-            <img src="gallery.png" alt="Homework" style="width:100%; max-width:600px; cursor: pointer;">
+            <img src="gallery329.png" alt="Homework" style="width:100%; max-width:1200px; cursor: pointer;">
         </a>
     </div>
 

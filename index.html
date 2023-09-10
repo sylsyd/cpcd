@@ -45,10 +45,9 @@
     </style>
 </head>
     <body class="main-page">
-    <div class="header">
-        <h1>Welcome to CPC and CPD Classroom Website</h1>
-    </div>
-
+        <div class="header" style="margin: 0; padding: 0;">
+            <img src="banner.png" alt="Staff" style="width:100%; max-width:1600px; margin: 0; padding: 0;">
+        </div>
     <div class="nav-bar">
         <button class="nav-toggle" onclick="toggleNav()">Menu</button>
         <div id="nav-links">
@@ -63,15 +62,87 @@
         </div>
     </div>
 
-    <div class="main-content">
-        <div style="text-align: center; background-color: white; border: 1px solid black; padding: 40px; width: 100%; margin: auto; text-align: center;">
-            <p>Welcome to our class website.
-                Here, you will find all the information
-                about our activities, homework, resources, and more.
-                Please use the email addresses to contact us directly</p>
-                <p> Bienvenue sur notre site de classe. Vous trouverez toutes les infos sur nos activités, les devoirs et les ressources. Merci de cliquer sur les courriels pour nous contacter.</p>
+    <div class="main-content" style="display: block;">
+        
+    
+        <div class="email-section" style="display: block; text-align: center;">
+            <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 50px; border: 3px solid black; margin: auto; display: block;">Click here to access the latest CPC/D Emails/News</button>
+            <div id="email-content" style="display:none;">
+                <div class="email-entry" data-modal-id="modal1" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>Email on 8th Sept: First Week</p>
+                    </div>
+                </div> 
+                
         </div>
+
+        
+        
+    
+    
+        
+        <!-- Modal contents -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <p>Chers parents, 
+
+</p>
+<p>La première semaine de CP s'est achevée et nous espérons que vos enfants sont contents de leurs premiers instants en CP.
+
+Nous avons plusieurs informations à vous transmettre.
+Tout d'abord, nous vous rappelons que la réunion de rentrée aura lieu Mardi 12 Septembre prochain, de 18h à 19h30. Nous vous accueillerons dans la salle N210.
+
+Vous trouverez dans le cahier de devoirs une fiche expliquant le fonctionnement du lion du comportement, notre outil de gestion du comportement à l'école. Nous vous invitons à en prendre connaissance, et également à signer la fiche de suivi pour la première semaine.
+
+</p>Les enfants ont également rapporté leur fichier d'exercices de lecture (photocopié) afin que vous puissiez voir ce qui a été fait cette semaine en lecture (français). Je vous invite à le regarder avec votre enfant. 
+Ce fichier doit impérativement être remis dans le cartable de votre enfant après consultation, afin que nous puissions l'utiliser dès lundi. Merci de ne pas faire les activités du fichier à la maison.
+
+Soyez vigilants pour que votre enfant n'oublie pas ses fichiers ou cahiers à la maison, notamment le cahier de devoirs.
+
+Les devoirs sont à faire quotidiennement. Les fiches de lecture ne doivent pas être lues en avance si le son n'a pas été étudié en classe au préalable. 
+
+<p>Nous rappelons également que les cours de sport ont lieu le mardi et le jeudi, et que les enfants doivent venir à l'école en tenue de sport. Il n'y a pas de temps prévu pour se changer avant ou après la séance. De plus, afin d'éviter les accidents, les enfants doivent porter des baskets adaptées pour le sport (pas de sandales ou tennis type Converse).
+
+Nous vous souhaitons un très beau weekend.
+
+Bien cordialement,</p>
+
+
+------------------------------------------------
+
+<p>Dear Parents,</p>
+
+We've wrapped up our first week in CP, and we're thrilled to see the kids settling in well. There's quite a bit of news and updates to share, so let's dive right in.
+
+First up, mark your calendars for our Back-to-School Night happening next Tuesday, September 12th. We'll meet from 6:00 PM to 7:30 PM in room N210. It's a great opportunity for us to connect and for you to get a better sense of what the school year has in store.
+
+<p>Now, let's talk about behaviour. We've included a note in the kids' homework books explaining our behaviour chart system—our way of promoting positive behaviour in class. Please take a moment to read it over and sign the first-week tracking sheet.
+
+Your child has also brought home a photocopied folder of this week's reading exercises. We encourage you to sit down with them and go through it. Just make sure the folder finds its way back into their backpack by Monday so we can hit the ground running. Please refrain from completing activities in the folder at home. 
+</p>
+<p>Keep an eye out to ensure your child doesn't leave their folders or notebooks at home, especially their homework book. 
+Homework should be done on a daily basis. Reading worksheets should not be read in advance unless the sound has been previously covered in class.
+</p>
+Lastly, a quick reminder about sport lessons—they're on Tuesdays and Thursdays. Please send your kids to school in their sports gear as there won't be time to change before or after. And just to keep everyone safe, appropriate sports shoes are a must; no sandals or casual tennis shoes, please.
+
+Wishing you all a fabulous weekend ahead.
+
+Warm regards,  
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <p>Here is the actual email that was sent on 5th Sept:</p>
+                <p>Dear Parents, ...</p>
+            </div>
+        </div>
+        
+    
+        
     </div>
+
        
 
     <div class="footer">
