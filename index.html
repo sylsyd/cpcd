@@ -66,7 +66,7 @@
         
     
         <div class="email-section" style="display: block; text-align: center;">
-            <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 50px; border: 3px solid black; margin: auto; display: block;">Click here to access the latest CPC/D Emails/News</button>
+            <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
             <div id="email-content" style="display:none;">
                 <div class="email-entry" data-modal-id="modal1" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
@@ -143,12 +143,13 @@ Warm regards,
         
     </div>
 
+    <div class="bottom-image">
+        <img src="bottom.png" alt="Bottom Image">
+    </div>
+
        
 
-    <div class="footer">
-        <p>Contact us at <a href="mailto:smagnin@edu.sg">smagnin@edu.sg</a> and <a href="mailto:lcoilier@edu.sg">lcoilier@edu.sg</a></p>
-    </div>
-    <script>
+        <script>
         function toggleNav() {
             var navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('show');

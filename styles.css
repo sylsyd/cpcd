@@ -60,12 +60,14 @@ body {
 }
 
 .footer {
-    background-color: #f8f9fa;
+    background-color: white;
+    border: 5px solid black;
     text-align: center;
-    padding: 10px;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 110%;
+    margin: 0;
+    padding: 10px;
 }
 
 body.main-page {
@@ -160,4 +162,18 @@ body:not(.main-page) {
 }
 .thumbnail:hover {
     transform: scale(2);  /* enlarge to 150% when hovered over */
+}
+
+.bottom-image {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: -1;  /* This ensures the image stays behind your content */
+}
+.bottom-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;  /* This will make sure the image is not larger than the viewport */
 }
