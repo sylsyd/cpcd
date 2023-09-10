@@ -43,15 +43,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // ... You can add other initialization code here
 });
-
-if (!sessionStorage.getItem("authenticated")) {
-    var password = prompt("Please enter the password to view this page", "");
-    var pass1 = "ifs2023";
-    
-    if (password == pass1) {
-      sessionStorage.setItem("authenticated", "true");
-    } else {
-      window.location = "http://www.google.com"; // Redirect to another page
-    }
-  }
   
