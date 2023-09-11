@@ -61,11 +61,12 @@ body {
 
 .footer {
     background-color: white;
-    border: 5px solid black;
+    border: 2px solid black;
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 110%;
+    width: 100%;
+    box-sizing: border-box;  /* Add this line */
     margin: 0;
     padding: 10px;
 }
@@ -104,6 +105,11 @@ body:not(.main-page) {
     overflow-y: auto; /* Adds scroll to the modal */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
 .modal-content {
