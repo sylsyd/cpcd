@@ -71,7 +71,7 @@ body {
 }
 
 body.main-page {
-    background-image: url('backgroundifs.png');
+    background-image: url('backgroundifs2.png');
 }
 
 body:not(.main-page) {
@@ -198,3 +198,4 @@ body:not(.main-page) {
     height: auto;
     max-width: 100%;  /* This will make sure the image is not larger than the viewport */
 }
+
