@@ -205,3 +205,8 @@ body:not(.main-page) {
     max-width: 100%;  /* This will make sure the image is not larger than the viewport */
 }
 
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
