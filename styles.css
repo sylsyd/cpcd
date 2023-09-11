@@ -78,13 +78,18 @@ body:not(.main-page) {
     background-image: url('backgroundifs.png');
 }
 
+/* Existing CSS ... */
+
+/* Smaller email box and font */
 .email-box {
     background-color: white;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    border: 1px solid black; /* Reduced border size */
+    padding: 5px; /* Reduced padding */
+    margin: 5px;  /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
     cursor: pointer;
 }
+
 
 .modal {
     display: none;
