@@ -63,11 +63,18 @@
     </div>
 
     <div class="main-content" style="display: block;">
-        
-    
         <div class="email-section" style="display: block; text-align: center;">
             <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
             <div id="email-content" style="display:none;">
+                
+                <!-- New Entry -->
+                <div class="email-entry" data-modal-id="modal3" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>10/09: Message from Flsco</p>
+                    </div>
+                </div>
+                
+                <!-- Existing Entries -->
                 <div class="email-entry" data-modal-id="modal2" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
                         <p>10/09: RhinoReaders link added to Resources</p>
@@ -78,14 +85,41 @@
                         <p>08/09: First Week email</p>
                     </div>
                 </div> 
-                
             </div>
         </div>
+    </div>
+    
+    <!-- New Modal3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            Dear Parents,
 
-        
-        
+I would like to greet you and your child welcome to this new school year at International French School - Singapore (IFS) and to introduce myself. I was so enthusiastic about meeting with your children this week ! 
+
+My name is Maïe, and I'm a teacher of French as a schooling language (FLSCO). I will have the pleasure to guide your child to pursue her/his integration into the French education system. This will take place through the FLSCO program. 
+
+This program will support your child's effort to learn and understand French in everyday life and at school, in accordance with her/his main teacher. The language activities offered during FLSco sessions give your child exposure to oral and written language in a small group. She/he should be able to increase her/his knowledge of French vocabulary, make sentences, read and write in French, learn poems, songs and other elements of French culture. 
+
+Regarding the FLSCO lessons, I teach your child 5 times a week. She/he is currently in a group of 6 children.
+
+The program is flexible, depending on your child's improvement in French. We assess and discuss very often about each child with the teaching team (main teacher, english teacher, FLSCO teachers...) and may contact you later during the school year to propose another program (less or more french lessons, sometimes stopping the program if your child is able to understand everything in class).
+
+We are going to use mainly the Seesaw application for homework, to support your child's learning at home and at school. Seesaw is a very interessant tool to learn French in a fun way and to encourage your child to speak French, even when we're not at school. You can find in her/his folder today a sheet with your child's personal code to log on the application, and all the explanations for you. Feel free to contact me if you have any question or issue. To give everyone time to discover the application, this week will be a "trial" week, that's why there isn't any "due date" for the activities to be completed on seesaw. Then, your child will be assigned at least one activity/day on Seesaw, to be done daily. I will give them feedback everyday during the class. 
+
+Moreover, in addition to the "folder lessons" you may have already seen, which is supposed to go back home everyday, your child will also bring back home every Friday a FLSCO notebook,  in order to show you the activities we completed during the week in class. It is really important to support your child's learning by regularly looking at her/his notebook with her/him, and checking that the homework is done. Please, be nice to put it back in her/his schoolbag every Monday morning.
+
+I will be attending the CP meeting on Tuesday, 12th September, in Amphitheater 2900, so feel free to contact me if you want to meet me, or just ask me some questions. 
+
+Rest assured that we are doing our best to ensure that your child has a wonderful, challenging and fulfilling school year.
+
+Feel free to contact me if you have any questions or concerns,
+
+I wish you a lovely week,
+        </div>
+    </div>
     
-    
+        
         
         <!-- Modal contents -->
         <div id="modal1" class="modal">
