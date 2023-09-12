@@ -69,6 +69,13 @@
             <div id="email-content" style="display:none;">
                 
                 <!-- New Entry -->
+                <div class="email-entry" data-modal-id="modal5" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>12/09: Added Trombinoscope to Gallery.</p>
+                    </div>
+                </div>
+
+                <!-- New Entry -->
                 <div class="email-entry" data-modal-id="modal4" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
                         <p>10/09: Seesaw link added to Resources.</p>
@@ -96,7 +103,15 @@
             </div>
         </div>
     </div>
-    
+    <!-- New Modal4 -->
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <a href="https://cpcd.netlify.app/gallery" target="_blank">https://cpcd.netlify.app/gallery</a>
+
+        </div>
+    </div>
+
      <!-- New Modal4 -->
      <div id="modal4" class="modal">
         <div class="modal-content">
