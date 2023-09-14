@@ -68,6 +68,14 @@
             <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
             <div id="email-content" style="display:none;">
                 
+
+                <!-- New Entry -->
+                <div class="email-entry" data-modal-id="modal7" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>14/09: Gallery Settings Updated.</p>
+                    </div>
+                </div>
+
                 <!-- New Entry -->
                 <div class="email-entry" data-modal-id="modal6" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
@@ -108,6 +116,15 @@
                     </div>
                 </div> 
             </div>
+        </div>
+    </div>
+    
+    <!-- New Modal4 -->
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            The password for the Drive link has been removed and instead the folder instead has been restricted to CPC/CPD families. You will need to login to access the gallery.
+
         </div>
     </div>
     
