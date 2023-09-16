@@ -211,3 +211,29 @@ body:not(.main-page) {
     flex-wrap: wrap;
 }
 
+.fade-in {
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .email-entry {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: appear 0.5s forwards;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
