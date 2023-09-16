@@ -65,9 +65,15 @@
 
     <div class="main-content" style="display: block;">
         <div class="email-section" style="display: block; text-align: center;">
-            <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
+            <button onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
             <div id="email-content" style="display:none;">
                 
+                 <!-- New Entry -->
+                 <div class="email-entry" data-modal-id="modal8" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>16/09: Classroom Rules added to the Gallery</p>
+                    </div>
+                </div>
 
                 <!-- New Entry -->
                 <div class="email-entry" data-modal-id="modal7" onclick="openModal(this.getAttribute('data-modal-id'))">
@@ -116,6 +122,14 @@
                     </div>
                 </div> 
             </div>
+        </div>
+    </div>
+    
+    <!-- New Modal4 -->
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            Go and have a look at the Classroom Rules display we created during our coteaching lessons with CPC and CPD: https://cpcd.netlify.app/gallery
         </div>
     </div>
     
