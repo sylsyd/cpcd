@@ -237,3 +237,96 @@ body:not(.main-page) {
         transform: translateY(0);
     }
 }
+
+.timetable-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .timetable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .day {
+    margin: 10px; 
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .day h2 {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .lesson {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .lesson img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .time {
+    display: block;
+    background-color: white;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  
+  .weekly-title {
+    background-color: white;
+    display: inline;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 24px; 
+  }
+        
+  @media (max-width: 768px) {
+    .timetable-container div {
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .timetable-container p {
+        font-size: 18px;  /* adjust as needed */
+    }
+    .timetable-container p:last-child {
+        font-size: 14px;  /* adjust as needed */
+    }
+}
+
+.day, .lesson {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: cascadeIn 0.5s forwards;
+}
+  
+@keyframes cascadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+/* Delay for each day */
+.day:nth-child(1) { animation-delay: 0.5s; }
+.day:nth-child(2) { animation-delay: 1s; }
+.day:nth-child(3) { animation-delay: 1.5s; }
+.day:nth-child(4) { animation-delay: 2s; }
+.day:nth-child(5) { animation-delay: 2.5s; }
+  
+/* Delay for each lesson within a day */
+.day .lesson:nth-child(1) { animation-delay: 0.2s; }
+.day .lesson:nth-child(2) { animation-delay: 0.4s; }
+.day .lesson:nth-child(3) { animation-delay: 0.6s; }
+.day .lesson:nth-child(4) { animation-delay: 0.8s; }
+.day .lesson:nth-child(5) { animation-delay: 1s; }
+.day .lesson:nth-child(6) { animation-delay: 1.2s; }
+.day .lesson:nth-child(7) { animation-delay: 1.4s; }
