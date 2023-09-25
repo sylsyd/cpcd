@@ -330,3 +330,20 @@ body:not(.main-page) {
 .day .lesson:nth-child(5) { animation-delay: 1s; }
 .day .lesson:nth-child(6) { animation-delay: 1.2s; }
 .day .lesson:nth-child(7) { animation-delay: 1.4s; }
+
+.nav-bar a:hover, .email-box:hover {
+    transform: scale(1.05);
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  #nav-links.show {
+      animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  

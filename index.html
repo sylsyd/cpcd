@@ -68,6 +68,13 @@
             <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
             <div id="email-content" style="display:none;">
                 
+                  <!-- New Entry -->
+                  <div class="email-entry" data-modal-id="modal10" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>25/09: Art Section added to Resources. Click for more info.</p>
+                    </div>
+                </div>
+
                 <!-- New Entry -->
                 <div class="email-entry" data-modal-id="modal9" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
@@ -128,6 +135,14 @@
                     </div>
                 </div> 
             </div>
+        </div>
+    </div>
+    
+    <!-- New Modal4 -->
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal10')">&times;</span>
+            An Art section has been added to the Resources tab which will take you to a document showcasing current and upcoming activities explored during Art lessons created by Syl and delivered by Ms Anu.
         </div>
     </div>
     
