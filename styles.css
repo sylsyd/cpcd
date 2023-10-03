@@ -12,6 +12,7 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0;
+    margin-top: 0; /* Add this line */
     padding: 0;
 }
 

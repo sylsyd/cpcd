@@ -17,6 +17,8 @@
             display: flex;
         }
 
+        
+
 
         @media screen and (max-width: 600px) {
             .nav-toggle {
@@ -43,7 +45,7 @@
         }
         
     .responsive-image {
-        width: 50%;
+        width: 43%;
         max-width: 800px;
         margin: 0 auto;
         padding: 0;
@@ -53,15 +55,16 @@
 
     @media screen and (max-width: 1200px) {
     .responsive-image {
-        width: 100%;
+        width: 100%;  /* Adjust this percentage to your preference */
         max-width: none;
     }
 }
 
+
     </style>
 </head>
     <body class="main-page">
-        <div class="header" style="margin: 0; padding: 0;">
+        <div class="header" style="margin: -5px; padding: 0;">
             <img src="banner3.png" alt="Staff" style="width:100%; max-width:1600px; margin: 0; padding: 0; border: 3px solid black;">
         </div>
     <div class="nav-bar">
@@ -81,7 +84,7 @@
 
     <div class="main-content" style="display: block;">
         <div class="email-section" style="display: block; text-align: center;">
-            <img src="home.png" alt="Home Image" class="responsive-image" style="margin: 0 auto; padding: 0; border: 3px solid black; display: block;">
+            <img src="home2.png" alt="Home Image" class="responsive-image" style="margin: 0 auto; padding: 0; border: 3px solid black; display: block; margin-top: -20px;">
             <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1400px; height: 50px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to our classroom website. Click here for the latest updates</button>
             <div id="email-content" style="display:none;">
                 
