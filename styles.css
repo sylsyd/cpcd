@@ -72,7 +72,7 @@ body {
 }
 
 body.main-page {
-    background-image: url('backgroundifs2.png');
+    background-image: url('backgroundifs.png');
 }
 
 body:not(.main-page) {

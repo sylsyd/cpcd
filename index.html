@@ -42,6 +42,22 @@
             }
         }
         
+    .responsive-image {
+        width: 50%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+        border: 3px solid black;
+        display: block;
+    }
+
+    @media screen and (max-width: 1200px) {
+    .responsive-image {
+        width: 100%;
+        max-width: none;
+    }
+}
+
     </style>
 </head>
     <body class="main-page">
@@ -65,7 +81,8 @@
 
     <div class="main-content" style="display: block;">
         <div class="email-section" style="display: block; text-align: center;">
-            <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1200px; height: 100px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to the CPC and CPD classroom website. Click here for the latest CPC/D Emails/News</button>
+            <img src="home.png" alt="Home Image" class="responsive-image" style="margin: 0 auto; padding: 0; border: 3px solid black; display: block;">
+            <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1400px; height: 50px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to our classroom website. Click here for the latest updates</button>
             <div id="email-content" style="display:none;">
                 
                  <!-- New Entry -->
