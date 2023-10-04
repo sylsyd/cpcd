@@ -44,21 +44,22 @@
             }
         }
         
-    .responsive-image {
-        width: 43%;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0;
-        border: 3px solid black;
-        display: block;
-    }
-
-    @media screen and (max-width: 1200px) {
-    .responsive-image {
-        width: 100%;  /* Adjust this percentage to your preference */
-        max-width: none;
-    }
+        .responsive-image {
+  margin: 0 auto;
+  padding: 0;
+  border: 3px solid black;
+  display: block;
+  margin-top: -20px;
+  width: 800px; /* Set your desired width for larger screens here */
 }
+
+/* Mobile view */
+@media only screen and (max-width: 768px) {
+  .responsive-image {
+    width: 100%; /* This will set the width to 100% of the screen on mobile */
+  }
+}
+
 
 
     </style>
@@ -84,7 +85,11 @@
 
     <div class="main-content" style="display: block;">
         <div class="email-section" style="display: block; text-align: center;">
-            <img src="home2.png" alt="Home Image" class="responsive-image" style="margin: 0 auto; padding: 0; border: 3px solid black; display: block; margin-top: -20px;">
+            <video class="responsive-image" autoplay loop muted style="margin: 0 auto; padding: 0; border: 3px solid black; display: block; margin-top: -20px;">
+                <source src="home5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
             <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1400px; height: 50px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to our classroom website. Click here for the latest updates</button>
             <div id="email-content" style="display:none;">
                 
@@ -338,9 +343,7 @@ Warm regards,
     <script src="script.js"></script>
 
    
-<div class="footer">
-    <p>Contact us: <a href="lcoilier@ifs.edu.sg">lcoilier@ifs.edu.sg</a> and <a href="lcoilier@ifs.edu.sg"> <a href="smagnin@ifs.edu.sg">smagnin@ifs.edu.sg</a></p>
-</div>
+
 
 </body>
 </html>
