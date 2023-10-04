@@ -92,7 +92,14 @@
             
             <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1400px; height: 50px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to our classroom website. Click here for the latest updates</button>
             <div id="email-content" style="display:none;">
-                
+               
+                  <!-- New Entry -->
+                  <div class="email-entry" data-modal-id="modal12" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>05/10: PE videos added to the gallery.</p>
+                    </div>
+                </div> 
+               
                  <!-- New Entry -->
                  <div class="email-entry" data-modal-id="modal11" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
@@ -169,6 +176,14 @@
             </div>
         </div>
     </div>
+    
+    <!-- New Modal4 -->
+    <div id="modal12" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal12')">&times;</span>
+            Videos from the most recent PE lesson have been added to the Gallery section.        </div>
+    </div>
+
     
     <!-- New Modal4 -->
     <div id="modal11" class="modal">
