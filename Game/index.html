@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sight Words Game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="homeScreen">
+    <img src="homescreensq.png" alt="Home Screen">
+    <p class="blink" onclick="startGame()">Click here to start</p>
+  </div>
+
+  <div id="level1" class="hidden game-level">
+    <img src="L1bg.png" id="level1bg" alt="Level 1 Background">
+    <img id="option1" class="word-option" alt="" onclick="checkAnswer(this.alt)">
+    <img id="option2" class="word-option" alt="" onclick="checkAnswer(this.alt)">
+    <img id="option3" class="word-option" alt="" onclick="checkAnswer(this.alt)">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
