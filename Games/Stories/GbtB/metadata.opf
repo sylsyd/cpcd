@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">501eaff3-586f-4454-a9cb-f7a966b925ab</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">501eaff3-586f-4454-a9cb-f7a966b925ab</dc:identifier>
+        <dc:title>CPC and CPD Go To Gardens By The Bay</dc:title>
+        <dc:creator opf:file-as="MAGNIN, Sylvain" opf:role="aut">Sylvain MAGNIN</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.28.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2023-10-15T00:00:00+00:00</dc:date>
+        <dc:publisher>www.bookcreator.com</dc:publisher>
+        <dc:language>en</dc:language>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>

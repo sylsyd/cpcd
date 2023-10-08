@@ -1,4 +1,4 @@
-let sightWords = ["I", "you", "is", "a", "my"]; // Add more words as needed
+let sightWords = ["I", "you", "is", "a", "my", "has"]; // Add more words as needed
 let currentWord = "";
 let correctCount = 0;
 
@@ -17,28 +17,30 @@ function startGame() {
 }
 
 function nextWord() {
-    shuffleArray(sightWords);
-    currentWord = sightWords[0]; // The correct word
-    let audio = new Audio(`${currentWord}.mp3`);
-    audio.play();
-    
-    // Create an options array that includes the correct word and two other unique words
-    let options = [currentWord];
-    for (let i = 1; i < sightWords.length && options.length < 3; i++) {
-      if (sightWords[i] !== currentWord) {
-        options.push(sightWords[i]);
-      }
-    }
-    
-    // Shuffle the options
-    options = shuffleArray(options);
+  shuffleArray(sightWords);
+  currentWord = sightWords[0]; // The correct word
+  let audio = new Audio(`${currentWord}.mp3`);
+  console.log(`Trying to load audio from: ${currentWord}.mp3`); // Debugging line
+  audio.play();
   
+  // Create an options array that includes the correct word and two other unique words
+  let options = [currentWord];
+  for (let i = 1; i < sightWords.length && options.length < 3; i++) {
+    if (sightWords[i] !== currentWord) {
+      options.push(sightWords[i]);
+    }
+  }
+  
+  // Shuffle the options
+  options = shuffleArray(options);
+
   // Set the options
   for (let i = 0; i < options.length; i++) {
-    let imgElement = document.getElementById(`option${i + 1}`);
-    imgElement.src = `${options[i]}.png`;
-    imgElement.alt = options[i];
-    imgElement.onclick = () => checkAnswer(options[i]);
+      let imgElement = document.getElementById(`option${i + 1}`);
+      imgElement.src = `${options[i]}.png`;
+      console.log(`Trying to load image from: ${options[i]}.png`); // Debugging line
+      imgElement.alt = options[i];
+      imgElement.onclick = () => checkAnswer(options[i]);
   }
 }
 

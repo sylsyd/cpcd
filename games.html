@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.nav-toggle {
+            display: none;
+        }
+
+        #nav-links {
+            display: flex;
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+            }
+
+            #nav-links a {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            #nav-links a:last-child {
+        border-bottom: none; /* Removes border from the last link */
+    }
+
+            #nav-links.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="margin: -5px; padding: 0;">
+        <img src="banner3.png" alt="Staff" style="width:100%; max-width:1600px; margin: 0; padding: 0; border: 3px solid black;">
+    </div>
+    <div class="nav-bar">
+        <button class="nav-toggle" onclick="toggleNav()">Menu</button>
+        <div id="nav-links">
+            <a href="/">Home</a>
+            <a href="timetables.html">Timetables</a>
+            <a href="homework.html">Homework</a>
+            <a href="catchup.html">Catch Up</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="staff.html">Staff</a>
+            <a href="resources.html">Resources</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="games.html">Games</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+    </div>
+    <div style="text-align: center;">
+        <div style="text-align: center; background-color: white; border: 1px solid black; padding: 10px; margin-top: -40px;">
+            Please note this page is still under construction and the activities are still being expanded and improved on.
+        <div class="row">
+            
+        <!-- Info Pack -->
+        <div style="display: inline-block; margin: 10px;">
+            <a href="Games\SightWords">
+                <img src="sight.jpeg" alt="Info" style="width:100%; max-width:175px; cursor: pointer;">
+            </a>
+            <div class="img-title" style="background-color: white; text-align: center;">Sight Words Game</div>
+        </div>
+        
+        <!-- PE Dept -->
+        <div style="display: inline-block; margin: 10px;">
+            <a href="Games\Reading\index.html">
+                <img src="readingapp.jpeg" alt="PE" style="width:100%; max-width:175px; cursor: pointer;">
+            </a>
+            <div class="img-title" style="background-color: white; text-align: center;">Reading Game</div>
+        </div>
+        
+        <!-- Library -->
+        <div style="display: inline-block; margin: 10px;">
+            <a href="stories.html">
+                <img src="stories.jpeg" alt="Library" style="width:100%; max-width:175px; cursor: pointer;">
+            </a>
+            <div class="img-title" style="background-color: white; text-align: center;">CPC/D Stories</div>
+        </div>
+        
+            
+    <script>
+        function toggleNav() {
+            var navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+    <script src="script.js"></script>
+
+    <div class="footer">
+        <p>Contact us: <a href="lcoilier@ifs.edu.sg">lcoilier@ifs.edu.sg</a> and <a href="lcoilier@ifs.edu.sg"> <a href="smagnin@ifs.edu.sg">smagnin@ifs.edu.sg</a></p>
+    </div>
+    
+</body>
+</html>

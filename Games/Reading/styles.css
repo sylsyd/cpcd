@@ -1,0 +1,49 @@
+/* styles.css */
+.game-container {
+    position: relative;
+    width: 100%;
+    max-height: 800px;  /* Or whatever maximum height you prefer */
+    height: 100vh;
+    background-image: url('srbg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+#bg-img {
+    width: 100%;
+    height: auto;
+}
+
+.sentence {
+    position: absolute;
+    font-size: 44px;
+    text-align: center;
+    color: white; /* Set the text color to white */
+    font-family: 'Chalkduster', cursive; /* Set the font to look like chalk */
+}
+
+
+
+.choices {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.choices img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    margin: 0 25px;  /* Adds horizontal space between each image */
+}
+
+.choices img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}

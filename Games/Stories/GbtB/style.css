@@ -1,0 +1,303 @@
+@page {
+    margin-bottom: 5pt;
+    margin-top: 5pt
+    }
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url(OEBPS/fonts/OpenSans.ttf)
+    }
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    src: url(OEBPS/fonts/OpenSans-Bold.ttf)
+    }
+@font-face {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: normal;
+    src: url(OEBPS/fonts/OpenSans-Italic.ttf)
+    }
+@font-face {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: bold;
+    src: url(OEBPS/fonts/OpenSans-BoldItalic.ttf)
+    }
+
+.audiopauseicon {
+    display: none;
+    text-rendering: auto
+    }
+.calibre {
+    border-bottom-color: currentColor;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-left-color: currentColor;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: currentColor;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: currentColor;
+    border-top-style: none;
+    border-top-width: 0;
+    height: 675px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    outline: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-rendering: auto;
+    width: 675px
+    }
+.calibre1 {
+    border-bottom-color: currentColor;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-left-color: currentColor;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: currentColor;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: currentColor;
+    border-top-style: none;
+    border-top-width: 0;
+    display: block;
+    font-size: 0.83333em;
+    height: 675px;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    outline: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-rendering: auto;
+    width: 675px
+    }
+.calibre2 {
+    height: auto;
+    text-rendering: auto;
+    width: auto
+    }
+.calibre3 {
+    text-rendering: auto
+    }
+.calibre4 {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    display: block;
+    height: 675px;
+    left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 0;
+    width: 675px
+    }
+.calibre5 {
+    display: block;
+    text-rendering: auto
+    }
+.calibre6 {
+    display: block;
+    font-size: 0.83333em;
+    margin-bottom: 0;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0
+    }
+.calibre7 {
+    display: block;
+    list-style-type: decimal;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1em
+    }
+.calibre8 {
+    display: list-item
+    }
+.item {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    display: block;
+    height: 402px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-rendering: auto;
+    width: 402px
+    }
+.item1 {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-family: "Open Sans";
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: normal;
+    height: 182px;
+    line-height: 26px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: left;
+    text-decoration: none;
+    text-rendering: auto;
+    white-space: pre-wrap;
+    width: 535px
+    }
+.item2 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-rendering: auto;
+    width: auto
+    }
+.item3 {
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    display: block;
+    height: 405px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    text-rendering: auto;
+    width: 405px
+    }
+.left {
+    display: block;
+    height: 100%;
+    left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 0;
+    width: 100%
+    }
+.selectionframe {
+    display: block;
+    left: 136px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 9px;
+    z-index: 1001
+    }
+.selectionframe1 {
+    display: block;
+    left: 58px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 425px;
+    z-index: 1002
+    }
+.selectionframe2 {
+    display: block;
+    left: 575px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 15px;
+    z-index: 1004
+    }
+.selectionframe3 {
+    display: block;
+    left: 141px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: absolute;
+    text-rendering: auto;
+    top: 0;
+    z-index: 1001
+    }
+

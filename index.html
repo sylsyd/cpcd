@@ -74,11 +74,12 @@
             <a href="/">Home</a>
             <a href="timetables.html">Timetables</a>
             <a href="homework.html">Homework</a>
-            <a href="catchup.html">Catch Up Corner</a>
+            <a href="catchup.html">Catch Up</a>
             <a href="gallery.html">Gallery</a>
             <a href="staff.html">Staff</a>
             <a href="resources.html">Resources</a>
             <a href="bookings.html">Bookings</a>
+            <a href="games.html">Games</a>
         </div>
     </div>
     
@@ -93,6 +94,14 @@
             <button class="fade-in" onclick="toggleEmails()" style="background-color: white; width: 100%; max-width: 1400px; height: 50px; border: 3px solid black; margin: auto; display: block; font-size: 20px; cursor: pointer;">Welcome to our classroom website. Click here for the latest updates</button>
             <div id="email-content" style="display:none;">
                
+
+                <!-- New Entry -->
+                <div class="email-entry" data-modal-id="modal13" onclick="openModal(this.getAttribute('data-modal-id'))">
+                    <div class="email-box">
+                        <p>08/10: Games tab added.</p>
+                    </div>
+                </div>
+
                   <!-- New Entry -->
                   <div class="email-entry" data-modal-id="modal12" onclick="openModal(this.getAttribute('data-modal-id'))">
                     <div class="email-box">
@@ -177,6 +186,14 @@
         </div>
     </div>
     
+    <!-- New Modal4 -->
+    <div id="modal13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal13')">&times;</span>
+           Games tab added to the menu. Please note the page is a work in progress.        </div>
+    </div>
+
+
     <!-- New Modal4 -->
     <div id="modal12" class="modal">
         <div class="modal-content">
