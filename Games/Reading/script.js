@@ -8,16 +8,24 @@ function shuffleArray(array) {
 
 // Define the sentences, image options, and correct answers
 const sentences = [
-    { text: 'The cat is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg'], correct: 'cat_hot' },
-    { text: 'The bug can hop.', options: ['bughop.jpeg', 'foxhop.jpeg', 'foxbox.jpeg'], correct: 'bughop' },
-    { text: 'I can run.', options: ['ising.jpeg', 'ieat.jpeg', 'irun.jpeg'], correct: 'irun' },
-    { text: 'The hen has a red cap.', options: ['hencap.jpeg', 'henshirt.jpeg', 'henshoe.jpeg'], correct: 'hencap' },
-    { text: 'The web is wet.', options: ['webwet.jpeg', 'webfire.jpeg', 'netwet.jpeg'], correct: 'webwet' },
-    { text: 'I am sad.', options: ['ihappy.jpeg', 'imad.jpeg', 'isad.jpeg'], correct: 'isad' },
-    { text: 'A lamp in a pond', options: ['lamp.jpeg', 'clam.jpeg', 'lamb.jpeg'], correct: 'lamp' },
-    { text: 'A frog on a log.', options: ['froglog.jpeg', 'logfrog.jpeg', 'frogleaf.jpeg'], correct: 'froglog' },
-    { text: 'The crab is fast.', options: ['fastcrab.jpeg', 'sadcrab.jpeg', 'fastrat.jpeg'], correct: 'fastcrab' },
-    { text: 'The tent is big.', options: ['bigtent.jpeg', 'bigten.jpeg', 'bigclown.jpeg'], correct: 'bigtent' }
+    { text: 'The cat is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg', 'sadcrab.jpeg'], correct: 'cat_hot' },
+    { text: 'The bug can hop.', options: ['bughop.jpeg', 'foxhop.jpeg', 'foxbox.jpeg', 'dog_hot.png.jpeg'], correct: 'bughop' },
+    { text: 'I can run.', options: ['ising.jpeg', 'ieat.jpeg', 'irun.jpeg','foxbox.jpeg'], correct: 'irun' },
+    { text: 'The hen has a red cap.', options: ['hencap.jpeg', 'henshirt.jpeg', 'henshoe.jpeg', 'irun.jpeg'], correct: 'hencap' },
+    { text: 'The web is wet.', options: ['webwet.jpeg', 'webfire.jpeg', 'netwet.jpeg', 'henshoe.jpeg'], correct: 'webwet' },
+    { text: 'I am sad.', options: ['ihappy.jpeg', 'imad.jpeg', 'isad.jpeg', 'netwet.jpeg'], correct: 'isad' },
+    { text: 'A lamp in a pond', options: ['lamp.jpeg', 'clam.jpeg', 'lamb.jpeg', 'isad.jpeg'], correct: 'lamp' },
+    { text: 'A frog on a log.', options: ['froglog.jpeg', 'logfrog.jpeg', 'frogleaf.jpeg', 'lamb.jpeg'], correct: 'froglog' },
+    { text: 'The crab is fast.', options: ['fastcrab.jpeg', 'sadcrab.jpeg', 'fastrat.jpeg', 'frogleaf.jpeg'], correct: 'fastcrab' },
+    { text: 'The tent is big.', options: ['bigtent.jpeg', 'bigten.jpeg', 'bigclown.jpeg', 'fastrat.jpeg'], correct: 'bigtent' },
+    { text: 'The brick drops in the net.', options: ['brick.jfif', 'trucknet.jfif', 'truckwings.jfif', 'bigclown.jpeg'], correct: 'brick' },
+    { text: 'The truck stops at red.', options: ['truckstops.jfif', 'trucknet.jfif', 'racecar.jfif', 'truckwings.jfif'], correct: 'truckstops' },
+    { text: 'A rat traps a cat.', options: ['rattrap.png', 'cattrap2.jfif', 'rateat.jfif', 'racecar.jfif'], correct: 'cattrap2' },
+    { text: 'The cat is from France.', options: ['frenchcat.jfif', 'aussiecat.jfif', 'ukcat.jfif', 'singcat.jfif'], correct: 'frenchcat' },
+    { text: 'The cat has a glass of milk', options: ['catmilk.jfif', 'ratmilk.jfif', 'lionmilk.jfif', 'catwine.jfif'], correct: 'catmilk' },
+    { text: 'Syl has a gift', options: ['sylgift.jfif', 'syldog.jfif', 'sylroo.jfif', 'catwine.jfif'], correct: 'sylgift' },
+    { text: 'Tom grabs a crab', options: ['tomcrab.jfif', 'tomshark.jfif', 'tomlion.jfif', 'cattrap.jfif'], correct: 'tomcrab' },
+    { text: 'Tam dug a hole.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
 ];
 
 // Shuffle the sentences
@@ -76,7 +84,7 @@ function gameOver() {
     const img = document.createElement('img');
     img.src = 'over.png';
     img.alt = 'Game Over';
-    img.onclick = () => window.location.href = 'http://127.0.0.1:5500/games.html';
+    img.onclick = () => window.location.href = 'https://cpcd.netlify.app/games';
     choicesElement.appendChild(img);
 }
 
@@ -100,6 +108,6 @@ window.onload = function() {
     sentence.style.left = `${(containerWidth * 0.18)}px`;
 
     // Set the position of the image choices based on the dimensions
-    choices.style.top = `${(containerHeight * 0.65)}px`;
-    choices.style.left = `${(containerWidth * 0.13)}px`;
+    choices.style.top = `${(containerHeight * 0.6)}px`;
+    
 };
