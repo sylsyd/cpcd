@@ -6,6 +6,16 @@ function shuffleArray(array) {
     }
 }
 
+// Function to pick a random item from an array
+function pickRandomItem(arr) {
+    const index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+}
+
+// Array of success audio files
+const successAudios = ['goodonya.mp3', 'ulegend.mp3', 'urockstar.mp3', 'welldone.mp3', 'crushingit.mp3'];
+
+
 // Define the sentences, image options, and correct answers
 const sentences = [
     { text: 'The cat is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg', 'sadcrab.jpeg'], correct: 'cat_hot' },
@@ -28,44 +38,37 @@ const sentences = [
     { text: 'Tam dug a hole.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
 ];
 
-// Shuffle the sentences
+// Shuffle the sentences and their options
 shuffleArray(sentences);
-
-// Shuffle the options for each sentence
 sentences.forEach(sentence => shuffleArray(sentence.options));
 
 let currentSentence = 0;
 
 function loadSentence() {
-    // Load the sentence
     const sentenceElement = document.getElementById('sentence');
     sentenceElement.textContent = sentences[currentSentence].text;
 
-    // Load the image options
     const choicesElement = document.getElementById('choices');
-    choicesElement.innerHTML = ''; // Clear existing choices
+    choicesElement.innerHTML = '';
     sentences[currentSentence].options.forEach((option) => {
         const img = document.createElement('img');
         img.src = option;
         img.alt = option;
-        img.onclick = () => checkAnswer(option.split('.')[0]); // Remove the file extension
+        img.onclick = () => checkAnswer(option.split('.')[0]);
         choicesElement.appendChild(img);
     });
 }
 
-// ... (the rest of your code remains the same until the checkAnswer function)
-
 function checkAnswer(answer) {
     const audio = new Audio();
     if (answer === sentences[currentSentence].correct) {
-        audio.src = 'goodonya.mp3';
+        audio.src = pickRandomItem(successAudios); // Pick a random success audio
         audio.play();
     } else {
         audio.src = 'nahsorry.mp3';
         audio.play();
     }
 
-    // Load the next sentence (only once)
     currentSentence++;
     if (currentSentence < sentences.length) {
         loadSentence();
@@ -74,13 +77,10 @@ function checkAnswer(answer) {
     }
 }
 
-// New game over function
 function gameOver() {
-    // Clear existing content
     const choicesElement = document.getElementById('choices');
     choicesElement.innerHTML = '';
-    
-    // Create a game over image and append it
+
     const img = document.createElement('img');
     img.src = 'over.png';
     img.alt = 'Game Over';
@@ -88,10 +88,6 @@ function gameOver() {
     choicesElement.appendChild(img);
 }
 
-// ... (the rest of your code remains the same)
-
-
-// Initialize the game and set positions
 window.onload = function() {
     loadSentence();
 
@@ -99,15 +95,11 @@ window.onload = function() {
     const sentence = document.querySelector('.sentence');
     const choices = document.querySelector('.choices');
 
-    // Get the dimensions of the game container
     const containerWidth = gameContainer.offsetWidth;
     const containerHeight = gameContainer.offsetHeight;
 
-    // Set the position of the sentence based on the dimensions
     sentence.style.top = `${(containerHeight * 0.25)}px`;
     sentence.style.left = `${(containerWidth * 0.18)}px`;
 
-    // Set the position of the image choices based on the dimensions
     choices.style.top = `${(containerHeight * 0.6)}px`;
-    
 };
