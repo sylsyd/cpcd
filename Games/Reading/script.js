@@ -36,6 +36,8 @@ const sentences = [
     { text: 'Syl has a gift', options: ['sylgift.jfif', 'syldog.jfif', 'sylroo.jfif', 'catwine.jfif'], correct: 'sylgift' },
     { text: 'Tom grabs a crab', options: ['tomcrab.jfif', 'tomshark.jfif', 'tomlion.jfif', 'cattrap.jfif'], correct: 'tomcrab' },
     { text: 'Tam dug a pit.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
+    { text: 'A big pig in a wig.', options: ['pigwig.jpeg', 'pigjig.jpeg', 'pigfig.jpeg', 'pigwing.jpeg'], correct: 'pigwig' },
+    { text: 'A cat in a hat.', options: ['cathat.jpeg', 'catinhat.jpeg', 'catmat.jpeg', 'catrat.jpeg'], correct: 'catinhat' },
 ];
 
 // Shuffle the sentences and their options
