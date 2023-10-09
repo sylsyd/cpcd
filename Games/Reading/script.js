@@ -35,7 +35,7 @@ const sentences = [
     { text: 'The cat has a glass of milk', options: ['catmilk.jfif', 'ratmilk.jfif', 'lionmilk.jfif', 'catwine.jfif'], correct: 'catmilk' },
     { text: 'Syl has a gift', options: ['sylgift.jfif', 'syldog.jfif', 'sylroo.jfif', 'catwine.jfif'], correct: 'sylgift' },
     { text: 'Tom grabs a crab', options: ['tomcrab.jfif', 'tomshark.jfif', 'tomlion.jfif', 'cattrap.jfif'], correct: 'tomcrab' },
-    { text: 'Tam dug a hole.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
+    { text: 'Tam dug a pit.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
 ];
 
 // Shuffle the sentences and their options
