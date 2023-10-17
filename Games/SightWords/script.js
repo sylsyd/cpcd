@@ -1,4 +1,4 @@
-let sightWords = ["I", "you", "is", "a", "my", "has"]; // Add more words as needed
+let sightWords = ["I", "you", "is", "a", "my", "has", "was", "have", "no", "he", "she", "we", "are", "to", "his"]; // Add more words as needed
 let currentWord = "";
 let correctCount = 0;
 
