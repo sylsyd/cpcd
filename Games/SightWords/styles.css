@@ -139,3 +139,10 @@
   object-fit: contain;
 }
 
+#listenBtn {
+  top: 5%;
+  left: 65%;
+  cursor: pointer;
+  max-width: 15%;
+  max-height: 15%;
+}
