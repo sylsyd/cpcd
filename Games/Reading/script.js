@@ -1,4 +1,6 @@
-// Function to shuffle an array
+let levelSelectionElement;
+
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -16,43 +18,154 @@ function pickRandomItem(arr) {
 const successAudios = ['goodonya.mp3', 'ulegend.mp3', 'urockstar.mp3', 'welldone.mp3', 'crushingit.mp3'];
 
 
-// Define the sentences, image options, and correct answers
-const sentences = [
-    { text: 'The cat is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg', 'sadcrab.jpeg'], correct: 'cat_hot' },
+const levels = {
+    level1: [ // Add CVC words items here
+        { text: 'cat', options: ['CVC/cat.png', 'CVC/mat.png', 'CVC/rat.png', 'CVC/hat.png'], correct: 'CVC/cat' },
+        { text: 'bat', options: ['CVC/bat.png', 'CVC/mat.png', 'CVC/rat.png', 'CVC/hat.png'], correct: 'CVC/bat' },
+        { text: 'bed', options: ['CVC/bed.png', 'CVC/red.png', 'CVC/leg.png', 'CVC/peg.png'], correct: 'CVC/bed' },
+        { text: 'bin', options: ['CVC/bin.png', 'CVC/fin.png', 'CVC/tin.png', 'CVC/pan.png'], correct: 'CVC/bin' },
+        { text: 'box', options: ['CVC/box.png', 'CVC/hut.png', 'CVC/pen.png', 'CVC/bat.png'], correct: 'CVC/box' },
+        { text: 'bug', options: ['CVC/bug.png', 'CVC/dog.png', 'CVC/mug.png', 'CVC/jug.png'], correct: 'CVC/bug' },
+        { text: 'cot', options: ['CVC/cot.png', 'CVC/bug.png', 'CVC/cat.png', 'CVC/bed.png'], correct: 'CVC/cot' },
+        { text: 'cub', options: ['CVC/cub.png', 'CVC/van.png', 'CVC/tin.png', 'CVC/sun.png'], correct: 'CVC/cub' },
+        { text: 'dog', options: ['CVC/dog.png', 'CVC/log.png', 'CVC/hop.png', 'CVC/mop.png'], correct: 'CVC/dog' },
+        { text: 'fin', options: ['CVC/fin.png', 'CVC/bin.png', 'CVC/tin.png', 'CVC/cat.png'], correct: 'CVC/fin' },
+        { text: 'hat', options: ['CVC/hat.png', 'CVC/bat.png', 'CVC/rat.png', 'CVC/cat.png'], correct: 'CVC/hat' },
+        { text: 'hen', options: ['CVC/hen.png', 'CVC/bat.png', 'CVC/hut.png', 'CVC/pen.png'], correct: 'CVC/hen' },
+        { text: 'hop', options: ['CVC/hop.png', 'CVC/red.png', 'CVC/hen.png', 'CVC/mop.png'], correct: 'CVC/hop' },
+        { text: 'hut', options: ['CVC/hut.png', 'CVC/jam.png', 'CVC/cot.png', 'CVC/box.png'], correct: 'CVC/hut' },
+        { text: 'jam', options: ['CVC/jam.png', 'CVC/jet.png', 'CVC/hat.png', 'CVC/bug.png'], correct: 'CVC/jam' },
+        { text: 'jet', options: ['CVC/jet.png', 'CVC/kit.png', 'CVC/pet.png', 'CVC/pug.png'], correct: 'CVC/jet' },
+        { text: 'jug', options: ['CVC/jug.png', 'CVC/bug.png', 'CVC/mug.png', 'CVC/mat.png'], correct: 'CVC/jug' },
+        { text: 'kit', options: ['CVC/kit.png', 'CVC/sit.png', 'CVC/leg.png', 'CVC/bin.png'], correct: 'CVC/kit' },
+        { text: 'leg', options: ['CVC/leg.png', 'CVC/peg.png', 'CVC/mug.png', 'CVC/sun.png'], correct: 'CVC/leg' },
+        { text: 'log', options: ['CVC/log.png', 'CVC/dog.png', 'CVC/rat.png', 'CVC/mud.png'], correct: 'CVC/log' },
+        { text: 'mat', options: ['CVC/mat.png', 'CVC/hat.png', 'CVC/rat.png', 'CVC/cat.png'], correct: 'CVC/mat' },
+        { text: 'mop', options: ['CVC/mop.png', 'CVC/bug.png', 'CVC/pet.png', 'CVC/peg.png'], correct: 'CVC/mop' },
+        { text: 'mud', options: ['CVC/mud.png', 'CVC/mug.png', 'CVC/pot.png', 'CVC/cub.png'], correct: 'CVC/mud' },
+        { text: 'mug', options: ['CVC/mug.png', 'CVC/jug.png', 'CVC/bug.png', 'CVC/peg.png'], correct: 'CVC/mug' },
+        { text: 'peg', options: ['CVC/peg.png', 'CVC/leg.png', 'CVC/pan.png', 'CVC/pet.png'], correct: 'CVC/peg' },
+        { text: 'pan', options: ['CVC/pan.png', 'CVC/red.png', 'CVC/sun.png', 'CVC/van.png'], correct: 'CVC/pan' },
+        { text: 'pen', options: ['CVC/pen.png', 'CVC/hen.png', 'CVC/van.png', 'CVC/tin.png'], correct: 'CVC/pen' },
+        { text: 'pet', options: ['CVC/pet.png', 'CVC/peg.png', 'CVC/jet.png', 'CVC/leg.png'], correct: 'CVC/pet' },
+        { text: 'pot', options: ['CVC/pot.png', 'CVC/dog.png', 'CVC/pug.png', 'CVC/hat.png'], correct: 'CVC/pot' },
+        { text: 'pug', options: ['CVC/pug.png', 'CVC/mug.png', 'CVC/bug.png', 'CVC/jug.png'], correct: 'CVC/pug' },
+        { text: 'rat', options: ['CVC/rat.png', 'CVC/bat.png', 'CVC/cat.png', 'CVC/hat.png'], correct: 'CVC/rat' },
+        { text: 'red', options: ['CVC/red.png', 'CVC/bed.png', 'CVC/sit.png', 'CVC/tin.png'], correct: 'CVC/red' },
+        { text: 'sit', options: ['CVC/sit.png', 'CVC/tin.png', 'CVC/fin.png', 'CVC/kit.png'], correct: 'CVC/sit' },
+        { text: 'sun', options: ['CVC/sun.png', 'CVC/fin.png', 'CVC/van.png', 'CVC/pet.png'], correct: 'CVC/sun' },
+        { text: 'tin', options: ['CVC/tin.png', 'CVC/fin.png', 'CVC/bin.png', 'CVC/jet.png'], correct: 'CVC/tin' },
+        { text: 'sun', options: ['CVC/sun.png', 'CVC/fin.png', 'CVC/pan.png', 'CVC/hen.png'], correct: 'CVC/sun' },
+        { text: 'tin', options: ['CVC/tin.png', 'CVC/fin.png', 'CVC/bin.png', 'CVC/pan.png'], correct: 'CVC/tin' },
+        { text: 'van', options: ['CVC/van.png', 'CVC/pan.png', 'CVC/cat.png', 'CVC/hat.png'], correct: 'CVC/van' },
+
+    ],
+    level2: [
+        { text: 'band', options: ['blends/band.png', 'blends/drum.png', 'blends/hand.png', 'blends/camp.png'], correct: 'blends/band' },
+        { text: 'bend', options: ['blends/bend.png', 'blends/tent.png', 'blends/band.png', 'blends/desk.png'], correct: 'blends/bend' },
+        { text: 'blob', options: ['blends/blob.png', 'blends/drop.png', 'blends/plum.png', 'blends/duck.png'], correct: 'blends/blob' },
+        { text: 'brick', options: ['blends/brick.png', 'blends/twig.png', 'blends/clap.png', 'blends/truck.png'], correct: 'blends/brick' },
+        { text: 'camp', options: ['blends/camp.png', 'blends/clam.png', 'blends/pond.png', 'blends/golf.png'], correct: 'blends/camp' },
+        { text: 'clam', options: ['blends/clam.png', 'blends/crab.png', 'blends/duck.png', 'blends/drip.png'], correct: 'blends/clam' },
+        { text: 'clap', options: ['blends/clap.png', 'blends/clam.png', 'blends/crab.png', 'blends/camp.png'], correct: 'blends/clap' },
+        { text: 'crab', options: ['blends/crab.png', 'blends/clam.png', 'blends/camp.png', 'blends/clap.png'], correct: 'blends/crab' },
+        { text: 'desk', options: ['blends/desk.png', 'blends/drum.png', 'blends/duck.png', 'blends/drip.png'], correct: 'blends/desk' },
+        { text: 'drip', options: ['blends/drip.png', 'blends/drop.png', 'blends/duck.png', 'blends/drum.png'], correct: 'blends/drip' },
+        { text: 'drop', options: ['blends/drop.png', 'blends/drip.png', 'blends/duck.png', 'blends/drum.png'], correct: 'blends/drop' },
+        { text: 'drum', options: ['blends/drum.png', 'blends/duck.png', 'blends/drop.png', 'blends/drip.png'], correct: 'blends/drum' },
+        { text: 'duck', options: ['blends/duck.png', 'blends/drum.png', 'blends/drop.png', 'blends/drip.png'], correct: 'blends/duck' },
+        { text: 'flag', options: ['blends/flag.png', 'blends/frog.png', 'blends/flip.png', 'blends/golf.png'], correct: 'blends/flag' },
+        { text: 'flip', options: ['blends/flip.png', 'blends/frog.png', 'blends/flag.png', 'blends/golf.png'], correct: 'blends/flip' },
+        { text: 'frog', options: ['blends/frog.png', 'blends/flip.png', 'blends/flag.png', 'blends/golf.png'], correct: 'blends/frog' },
+        { text: 'gift', options: ['blends/gift.png', 'blends/golf.png', 'blends/frog.png', 'blends/flip.png'], correct: 'blends/gift' },
+        { text: 'golf', options: ['blends/golf.png', 'blends/gift.png', 'blends/frog.png', 'blends/flip.png'], correct: 'blends/golf' },
+        { text: 'hand', options: ['blends/hand.png', 'blends/band.png', 'blends/camp.png', 'blends/lamp.png'], correct: 'blends/hand' },
+        { text: 'lamp', options: ['blends/lamp.png', 'blends/hand.png', 'blends/camp.png', 'blends/band.png'], correct: 'blends/lamp' },
+        { text: 'mask', options: ['blends/mask.png', 'blends/milk.png', 'blends/pink.png', 'blends/plug.png'], correct: 'blends/mask' },
+        { text: 'milk', options: ['blends/milk.png', 'blends/mask.png', 'blends/pink.png', 'blends/plug.png'], correct: 'blends/milk' },
+        { text: 'pink', options: ['blends/pink.png', 'blends/plug.png', 'blends/plum.png', 'blends/pond.png'], correct: 'blends/pink' },
+        { text: 'plug', options: ['blends/plug.png', 'blends/pink.png', 'blends/plum.png', 'blends/pond.png'], correct: 'blends/plug' },
+        { text: 'plum', options: ['blends/plum.png', 'blends/pond.png', 'blends/plug.png', 'blends/pink.png'], correct: 'blends/plum' },
+        { text: 'pond', options: ['blends/pond.png', 'blends/plum.png', 'blends/plug.png', 'blends/pink.png'], correct: 'blends/pond' },
+        { text: 'sled', options: ['blends/sled.png', 'blends/slip.png', 'blends/sock.png', 'blends/spin.png'], correct: 'blends/sled' },
+        { text: 'slip', options: ['blends/slip.png', 'blends/sled.png', 'blends/sock.png', 'blends/spin.png'], correct: 'blends/slip' },
+        { text: 'sock', options: ['blends/sock.png', 'blends/slip.png', 'blends/sled.png', 'blends/spin.png'], correct: 'blends/sock' },
+        { text: 'spin', options: ['blends/spin.png', 'blends/swim.png', 'blends/sled.png', 'blends/slip.png'], correct: 'blends/spin' },
+        { text: 'swim', options: ['blends/swim.png', 'blends/spin.png', 'blends/sled.png', 'blends/slip.png'], correct: 'blends/swim' },
+        { text: 'tent', options: ['blends/tent.png', 'blends/trap.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/tent' },
+        { text: 'trap', options: ['blends/trap.png', 'blends/tent.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/trap' },
+        { text: 'truck', options: ['blends/truck.png', 'blends/trap.png', 'blends/tent.png', 'blends/twig.png'], correct: 'blends/truck' },
+        { text: 'belt', options: ['blends/spin.png', 'blends/bend.png', 'blends/block.png', 'blends/brick.png'], correct: 'blends/belt' },
+        { text: 'slug', options: ['blends/spin.png', 'blends/swim.png', 'blends/sock.png', 'blends/sled.png'], correct: 'blends/truck' },
+        { text: 'hunt', options: ['blends/gift.png', 'blends/golf.png', 'blends/duck.png', 'blends/flag.png'], correct: 'blends/truck' },
+        { text: 'nest', options: ['blends/mask.png', 'blends/desk.png', 'blends/tent.png', 'blends/bend.png'], correct: 'blends/truck' },
+        { text: 'twig', options: ['blends/twig.png', 'blends/truck.png', 'blends/trap.png', 'blends/tent.png'], correct: 'blends/twig' }
+
+    ],
+    level3: [ { text: 'The cat is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg', 'sadcrab.jpeg'], correct: 'cat_hot' },
+    { text: 'The dog is hot.', options: ['cat_hot.png.jpeg', 'cat_bike.jpeg', 'dog_hot.png.jpeg', 'sadcrab.jpeg'], correct: 'dog_hot' },
     { text: 'The bug can hop.', options: ['bughop.jpeg', 'foxhop.jpeg', 'foxbox.jpeg', 'dog_hot.png.jpeg'], correct: 'bughop' },
+    { text: 'The fox can hop.', options: ['bughop.jpeg', 'foxhop.jpeg', 'foxbox.jpeg', 'dog_hot.png.jpeg'], correct: 'foxhop' },
     { text: 'I can run.', options: ['ising.jpeg', 'ieat.jpeg', 'irun.jpeg','foxbox.jpeg'], correct: 'irun' },
     { text: 'The hen has a red cap.', options: ['hencap.jpeg', 'henshirt.jpeg', 'henshoe.jpeg', 'irun.jpeg'], correct: 'hencap' },
     { text: 'The web is wet.', options: ['webwet.jpeg', 'webfire.jpeg', 'netwet.jpeg', 'henshoe.jpeg'], correct: 'webwet' },
     { text: 'I am sad.', options: ['ihappy.jpeg', 'imad.jpeg', 'isad.jpeg', 'netwet.jpeg'], correct: 'isad' },
+    { text: 'I am mad.', options: ['ihappy.jpeg', 'imad.jpeg', 'isad.jpeg', 'netwet.jpeg'], correct: 'imad' },
     { text: 'A lamp in a pond', options: ['lamp.jpeg', 'clam.jpeg', 'lamb.jpeg', 'isad.jpeg'], correct: 'lamp' },
     { text: 'A frog on a log.', options: ['froglog.jpeg', 'logfrog.jpeg', 'frogleaf.jpeg', 'lamb.jpeg'], correct: 'froglog' },
+    { text: 'A log on a frog.', options: ['froglog.jpeg', 'logfrog.jpeg', 'frogleaf.jpeg', 'lamb.jpeg'], correct: 'logfrog' },
     { text: 'The crab is fast.', options: ['fastcrab.jpeg', 'sadcrab.jpeg', 'fastrat.jpeg', 'frogleaf.jpeg'], correct: 'fastcrab' },
+    { text: 'The crab is sad.', options: ['fastcrab.jpeg', 'sadcrab.jpeg', 'fastrat.jpeg', 'frogleaf.jpeg'], correct: 'sadcrab' },
     { text: 'The tent is big.', options: ['bigtent.jpeg', 'bigten.jpeg', 'bigclown.jpeg', 'fastrat.jpeg'], correct: 'bigtent' },
+    { text: 'The ten is big.', options: ['bigtent.jpeg', 'bigten.jpeg', 'bigclown.jpeg', 'fastrat.jpeg'], correct: 'bigten' },
     { text: 'The brick drops in the net.', options: ['brick.jfif', 'trucknet.jfif', 'truckwings.jfif', 'bigclown.jpeg'], correct: 'brick' },
+    { text: 'The truck drops in the net.', options: ['brick.jfif', 'trucknet.jfif', 'truckwings.jfif', 'bigclown.jpeg'], correct: 'bricknet' },
     { text: 'The truck stops at red.', options: ['truckstops.jfif', 'trucknet.jfif', 'racecar.jfif', 'truckwings.jfif'], correct: 'truckstops' },
     { text: 'A rat traps a cat.', options: ['rattrap.png', 'cattrap2.jfif', 'rateat.jfif', 'racecar.jfif'], correct: 'cattrap2' },
+    { text: 'A cat traps a rat.', options: ['rattrap.png', 'cattrap2.jfif', 'rateat.jfif', 'racecar.jfif'], correct: 'rattrap' },
     { text: 'The cat is from France.', options: ['frenchcat.jfif', 'aussiecat.jfif', 'ukcat.jfif', 'singcat.jfif'], correct: 'frenchcat' },
+    { text: 'The cat is from Singapore.', options: ['frenchcat.jfif', 'aussiecat.jfif', 'ukcat.jfif', 'singcat.jfif'], correct: 'singcat' },
     { text: 'The cat has a glass of milk', options: ['catmilk.jfif', 'ratmilk.jfif', 'lionmilk.jfif', 'catwine.jfif'], correct: 'catmilk' },
+    { text: 'The rat has a glass of milk', options: ['catmilk.jfif', 'ratmilk.jfif', 'lionmilk.jfif', 'catwine.jfif'], correct: 'ratmilk' },
     { text: 'Syl has a gift', options: ['sylgift.jfif', 'syldog.jfif', 'sylroo.jfif', 'catwine.jfif'], correct: 'sylgift' },
+    { text: 'Syl has a dog', options: ['sylgift.jfif', 'syldog.jfif', 'sylroo.jfif', 'catwine.jfif'], correct: 'syldog' },
     { text: 'Tom grabs a crab', options: ['tomcrab.jfif', 'tomshark.jfif', 'tomlion.jfif', 'cattrap.jfif'], correct: 'tomcrab' },
     { text: 'Tam dug a pit.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifshole' },
+    { text: 'Tam has a dragon.', options: ['ifshole.jfif', 'ifsdragon.jfif', 'ifsgum.jfif', 'cattrap.jfif'], correct: 'ifsdragon' },
     { text: 'A big pig in a wig.', options: ['pigwig.jpeg', 'pigjig.jpeg', 'pigfig.jpeg', 'pigwing.jpeg'], correct: 'pigwig' },
     { text: 'A cat in a hat.', options: ['cathat.jpeg', 'catinhat.jpeg', 'catmat.jpeg', 'catrat.jpeg'], correct: 'catinhat' },
-];
+    { text: 'A hat on a cat.', options: ['cathat.jpeg', 'catinhat.jpeg', 'catmat.jpeg', 'catrat.jpeg'], correct: 'cathat' },
+    ],
+    level4: [ { text: 'The king is on the swing.', options: ['long/kingswing.png', 'long/kingsing.png', 'long/kingstring.png', 'long/kingsling.png'], correct: 'long/kingswing' },
+    { text: 'The king is on a string.', options: ['long/kingswing.png', 'long/kingsing.png', 'long/kingstring.png', 'long/kingsling.png'], correct: 'long/kingstring' },
+    { text: 'The king has a sling.', options: ['long/kingswing.png', 'long/kingsing.png', 'long/kingstring.png', 'long/kingsling.png'], correct: 'long/kingsling' },
+    { text: 'The king is singing.', options: ['long/kingswing.png', 'long/kingsing.png', 'long/kingstring.png', 'long/kingsling.png'], correct: 'long/kingsing' },
+    { text: 'He is winning', options: ['long/hewinning.png', 'long/shewinning.png', 'long/shesing.png', 'long/quokka.png'], correct: 'long/hewinning' },
+    { text: 'She is winning', options: ['long/hewinning.png', 'long/shewinning.png', 'long/shesing.png', 'long/quokka.png'], correct: 'long/shewinning' },
+    { text: 'We are singing', options: ['long/wesing.png', 'long/nosing.png', 'long/shesing.png', 'long/chimp.png'], correct: 'long/wesing' },
+    { text: 'He is singing', options: ['long/wesing.png', 'long/nosing.png', 'long/shesing.png', 'long/hesing.png'], correct: 'long/hesing' },
+    { text: 'He is running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/herun' }, 
+    { text: 'She is running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/sherun' },
+    { text: 'He is not running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/hesit' },  ]
+};
 
-// Shuffle the sentences and their options
-shuffleArray(sentences);
-sentences.forEach(sentence => shuffleArray(sentence.options));
 
+// Shuffle the items in each level
+Object.values(levels).forEach(level => {
+    shuffleArray(level);
+    level.forEach(item => shuffleArray(item.options));
+});
+
+let currentLevel = 'level1';
 let currentSentence = 0;
 
 function loadSentence() {
     const sentenceElement = document.getElementById('sentence');
-    sentenceElement.textContent = sentences[currentSentence].text;
+    sentenceElement.textContent = levels[currentLevel][currentSentence].text;
 
     const choicesElement = document.getElementById('choices');
     choicesElement.innerHTML = '';
-    sentences[currentSentence].options.forEach((option) => {
+    levels[currentLevel][currentSentence].options.forEach((option) => {
         const img = document.createElement('img');
         img.src = option;
         img.alt = option;
@@ -63,7 +176,7 @@ function loadSentence() {
 
 function checkAnswer(answer) {
     const audio = new Audio();
-    if (answer === sentences[currentSentence].correct) {
+    if (answer === levels[currentLevel][currentSentence].correct) {
         audio.src = pickRandomItem(successAudios); // Pick a random success audio
         audio.play();
     } else {
@@ -72,7 +185,19 @@ function checkAnswer(answer) {
     }
 
     currentSentence++;
-    if (currentSentence < sentences.length) {
+    if (currentSentence < levels[currentLevel].length) {
+        loadSentence();
+    } else if (currentLevel === 'level1') {
+        currentLevel = 'level2';
+        currentSentence = 0;
+        loadSentence();
+    } else if (currentLevel === 'level2') {
+        currentLevel = 'level3';
+        currentSentence = 0;
+        loadSentence();
+    } else if (currentLevel === 'level3') {
+        currentLevel = 'level4';
+        currentSentence = 0;
         loadSentence();
     } else {
         gameOver();
@@ -86,12 +211,13 @@ function gameOver() {
     const img = document.createElement('img');
     img.src = 'over.png';
     img.alt = 'Game Over';
-    img.onclick = () => window.location.href = 'https://cpcd.netlify.app/games';
+    img.onclick = () => resetGame(); // Changed this line
     choicesElement.appendChild(img);
 }
 
+
 window.onload = function() {
-    loadSentence();
+    levelSelectionElement = document.getElementById('levelSelection');
 
     const gameContainer = document.querySelector('.game-container');
     const sentence = document.querySelector('.sentence');
@@ -105,3 +231,48 @@ window.onload = function() {
 
     choices.style.top = `${(containerHeight * 0.6)}px`;
 };
+
+function startLevel(level) {
+    currentLevel = level;
+    currentSentence = 0;
+    levelSelectionElement.style.display = 'none'; // Hide the level selection
+    loadSentence(); // Start the game for the chosen level
+    document.getElementById("levelContainer").style.backgroundImage = "url('srbg.png')";
+    const returnButton = document.getElementById('returnButton');
+    returnButton.style.display = 'inline-block';  
+    
+
+}
+
+function resetGame() {
+    // Reset the game state
+    currentLevel = 'level1';
+    currentSentence = 0;
+
+    // Show the level selection
+    levelSelectionElement.style.display = 'block';
+    document.getElementById("levelContainer").style.backgroundImage = "url('bg.png')"; // Replace with your initial background
+
+    const returnButton = document.getElementById('returnButton');
+    returnButton.style.display = 'none';  // Hide the button
+}
+
+function returnToHomepage() {
+    window.location.href = "index.html"; 
+    const jingle = document.getElementById("homepageJingle");
+    jingle.play(); // Replace with the actual path if different
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const jingle = document.getElementById("homepageJingle");
+    jingle.play();
+});
+
+document.body.addEventListener('click', function() {
+    const audioElement = document.getElementById('homepageJingle');
+    if(audioElement && audioElement.paused) {
+        audioElement.play();
+    }
+});
+
+

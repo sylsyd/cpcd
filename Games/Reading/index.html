@@ -4,10 +4,26 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
+    <audio id="homepageJingle" autoplay controls>
+        <source src="jingle.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="game-container" id="levelContainer">
+        <img id="backgroundImage" src="bg.png" alt="Background" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;">
+        
+        <div class="level-selection" id="levelSelection">
+            <img src="level1.png" alt="Level 1" onclick="startLevel('level1')" />
+            <img src="level2.png" alt="Level 2" onclick="startLevel('level2')" />
+            <img src="level3.png" alt="Level 3" onclick="startLevel('level3')" />
+            <img src="level4.png" alt="Level 4" onclick="startLevel('level4')" />
+        </div>
+        
         <div class="sentence" id="sentence"></div>
         <div class="choices" id="choices"></div>
+        <button id="returnButton" class="return-button" onclick="returnToHomepage()" style="display:none;">Return to Homepage</button>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -2,13 +2,11 @@
 .game-container {
     position: relative;
     width: 100%;
-    max-height: 800px;  /* Or whatever maximum height you prefer */
+    max-height: 800px;
     height: 100vh;
-    background-image: url('srbg.png');
     background-size: cover;
     background-position: center;
 }
-
 
 #bg-img {
     width: 100%;
@@ -47,3 +45,50 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
     transform: scale(1.05); /* Slightly larger on hover */
 }
+
+.level-selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 19%;
+    padding: 50px 0;
+}
+
+.level-selection img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 20px;
+}
+
+.level-selection img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1c0470;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-family: 'Georgia', serif; /* Elegant font */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .return-button:hover {background-color: #43060e}
+  
+  

@@ -95,3 +95,16 @@ function playWord() {
   let audio = new Audio(`${currentWord}.mp3`);
   audio.play();
 }
+
+function returnToHomepage() {
+  // Reset the game state (if necessary)
+  // ...
+
+  // Show level selection and hide other game elements
+  document.getElementById("levelSelection").style.display = "flex";
+  document.getElementById("sentence").style.display = "none";
+  document.getElementById("choices").style.display = "none";
+
+  // Change the background back to bg.png
+  document.getElementById("levelContainer").style.backgroundImage = "url('bg.png')";
+}
