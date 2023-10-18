@@ -91,4 +91,7 @@
   
   .return-button:hover {background-color: #43060e}
   
+  #audioPlayer {
+    display: none;
+  }
   

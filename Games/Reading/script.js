@@ -259,18 +259,11 @@ function resetGame() {
 
 function returnToHomepage() {
     window.location.href = "index.html"; 
-    const jingle = document.getElementById("homepageJingle");
-    jingle.play(); // Replace with the actual path if different
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const jingle = document.getElementById("homepageJingle");
-    jingle.play();
-});
-
-document.body.addEventListener('click', function() {
-    const audioElement = document.getElementById('homepageJingle');
-    if(audioElement && audioElement.paused) {
+    if (window.location.pathname.endsWith('index.html')) {
+        var audioElement = document.getElementById("homepageJingle");
         audioElement.play();
     }
 });
