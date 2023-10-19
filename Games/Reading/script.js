@@ -95,7 +95,7 @@ const levels = {
         { text: 'tent', options: ['blends/tent.png', 'blends/trap.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/tent' },
         { text: 'trap', options: ['blends/trap.png', 'blends/tent.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/trap' },
         { text: 'truck', options: ['blends/truck.png', 'blends/trap.png', 'blends/tent.png', 'blends/twig.png'], correct: 'blends/truck' },
-        { text: 'belt', options: ['blends/belt.png', 'blends/bend.png', 'blends/bed.png', 'blends/brick.png'], correct: 'blends/belt' },
+        { text: 'belt', options: ['blends/belt.png', 'blends/bend.png', 'blends/.png', 'blends/brick.png'], correct: 'blends/belt' },
         { text: 'slug', options: ['blends/slug.png', 'blends/swim.png', 'blends/sock.png', 'blends/sled.png'], correct: 'blends/slug' },
         { text: 'hunt', options: ['blends/hunt.png', 'blends/golf.png', 'blends/duck.png', 'blends/flag.png'], correct: 'blends/hunt' },
         { text: 'nest', options: ['blends/nest.png', 'blends/desk.png', 'blends/tent.png', 'blends/bend.png'], correct: 'blends/nest' },
