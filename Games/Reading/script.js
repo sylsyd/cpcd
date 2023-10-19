@@ -95,10 +95,10 @@ const levels = {
         { text: 'tent', options: ['blends/tent.png', 'blends/trap.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/tent' },
         { text: 'trap', options: ['blends/trap.png', 'blends/tent.png', 'blends/truck.png', 'blends/twig.png'], correct: 'blends/trap' },
         { text: 'truck', options: ['blends/truck.png', 'blends/trap.png', 'blends/tent.png', 'blends/twig.png'], correct: 'blends/truck' },
-        { text: 'belt', options: ['blends/spin.png', 'blends/bend.png', 'blends/block.png', 'blends/brick.png'], correct: 'blends/belt' },
-        { text: 'slug', options: ['blends/spin.png', 'blends/swim.png', 'blends/sock.png', 'blends/sled.png'], correct: 'blends/truck' },
-        { text: 'hunt', options: ['blends/gift.png', 'blends/golf.png', 'blends/duck.png', 'blends/flag.png'], correct: 'blends/truck' },
-        { text: 'nest', options: ['blends/mask.png', 'blends/desk.png', 'blends/tent.png', 'blends/bend.png'], correct: 'blends/truck' },
+        { text: 'belt', options: ['blends/belt.png', 'blends/bend.png', 'blends/block.png', 'blends/brick.png'], correct: 'blends/belt' },
+        { text: 'slug', options: ['blends/slug.png', 'blends/swim.png', 'blends/sock.png', 'blends/sled.png'], correct: 'blends/slug' },
+        { text: 'hunt', options: ['blends/hunt.png', 'blends/golf.png', 'blends/duck.png', 'blends/flag.png'], correct: 'blends/hunt' },
+        { text: 'nest', options: ['blends/nest.png', 'blends/desk.png', 'blends/tent.png', 'blends/bend.png'], correct: 'blends/nest' },
         { text: 'twig', options: ['blends/twig.png', 'blends/truck.png', 'blends/trap.png', 'blends/tent.png'], correct: 'blends/twig' }
 
     ],
@@ -240,6 +240,9 @@ function startLevel(level) {
     document.getElementById("levelContainer").style.backgroundImage = "url('srbg.png')";
     const returnButton = document.getElementById('returnButton');
     returnButton.style.display = 'inline-block';  
+    var audioElement = document.getElementById("homepageJingle");
+    audioElement.pause();  // Pause the jingle audio
+    audioElement.currentTime = 0;
     
 
 }
