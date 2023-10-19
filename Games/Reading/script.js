@@ -248,13 +248,20 @@ function startLevel(level) {
     audioElement.pause();  // Pause the jingle audio
     audioElement.currentTime = 0;
     
-
+    // Hide the circular images when the level starts
+    hideCircularImages();
 }
+
+    
+    
+
+
 
 function resetGame() {
     // Reset the game state
     currentLevel = 'level1';
     currentSentence = 0;
+    showCircularImages();
 
     // Show the level selection
     levelSelectionElement.style.display = 'block';
@@ -275,4 +282,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Hide the circular PNGs
+function hideCircularImages() {
+    var circularImages = document.querySelector('.circular-images');
+    circularImages.style.display = 'none';
+}
+
+// Show the circular PNGs
+function showCircularImages() {
+    var circularImages = document.querySelector('.circular-images');
+    circularImages.style.display = 'block';
+}
 
