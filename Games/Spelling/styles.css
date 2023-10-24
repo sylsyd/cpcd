@@ -1,0 +1,333 @@
+.game-container {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    }
+    .sentence {
+    position: absolute;
+    font-size: 44px;
+    text-align: center;
+    color: white;
+    font-family: 'Chalkduster', cursive;
+    }
+    .choices {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    }
+    .choices img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 25px;
+    }
+    .choices img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    }
+    .level-selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 19%;
+    padding: 50px 0;
+    }
+    .level-selection img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 20px;
+    }
+    .level-selection img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    }
+    .return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1c0470;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-family: 'Georgia', serif;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    .return-button:hover {
+    background-color: #43060e;
+    }
+    .circular-images {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    }
+    .circular-frame {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+    .circular-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: saturate(0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+    .circular-frame img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    }
+    .stylish-button {
+    font-size: 54px;
+    background-color: #04245a;  /* Softer blue */
+    color: white;
+    padding: 30px 50px;
+    margin: 200px 0;
+    border: none;
+    cursor: pointer;  
+    border-radius: 50px;  /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);  /* Softer shadow */
+    display: block;
+    margin: 510px auto;
+    }
+    .stylish-button:hover {
+        background-color: #f5faf6;
+        color: rgb(11, 11, 11);
+        animation: wiggle 0.2s ease-in-out infinite;
+      }
+      
+      
+
+      @keyframes wiggle {
+        0% { transform: scale(1.5) rotate(0deg); }
+        25% { transform: scale(1.5) rotate(-3deg); }
+        50% { transform: scale(1.5) rotate(3deg); }
+        75% { transform: scale(1.5) rotate(-3deg); }
+        100% { transform: scale(1.5) rotate(3deg); }
+      }
+      
+      
+      .small-image {
+        width: 375px;
+        margin: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(99, 1, 1, 0.1);
+        pointer-events: none;
+        height: auto;
+        display: inline-block;
+        border: 5px solid transparent; /* Make sure the border is transparent */
+        border-image: linear-gradient(to bottom, #00008b, #6e0101);
+        border-image-slice: 1;
+    }
+    
+    #submitButton {
+    background-color: #700a13;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    width: 150px;
+    height: 70px;
+    margin-top: 420px;
+    }
+    #submitButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    }
+    .sentence, .choices {
+    width: 100%;
+    }
+    .stylish-button.clicked {
+    background-color: #f5faf6;
+    color: rgb(11, 11, 11);
+    }
+    
+    
+    .menu-icon:hover, .listen-icon:hover {
+    transform: scale(1.1);
+    }
+    .icon-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .menu-icon {
+        cursor: pointer;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        width: 130px;
+        height: 130px;
+        border-radius: 35px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        transition: transform 0.3s ease;
+        top: 20px;
+        right: 30px;
+    }
+    
+    .listen-icon {
+        cursor: pointer;
+        z-index: 1;
+        position: absolute;
+        right: 30px;
+        top: 0;
+        width: 125px;
+        height: 125px;
+        border-radius: 25px;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        margin-top: 10px;
+        transition: transform 0.3s ease;
+        top: 330px
+        
+    }
+
+    .timer-icon {
+        cursor: pointer;
+        width: 150px;
+        border-radius: 35px;
+        /* ...other styles... */
+      }
+      
+      .time-left {
+        font-size: 14px;
+        font-family: 'Georgia', serif; /* You can change this to any font you like */
+        color: #ffffff;  /* White color for better visibility on darker backgrounds */
+        text-shadow: 2px 2px 4px #000000;  /* Adds a slight shadow for readability */
+        background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+        border-radius: 8px;  /* Rounded corners */
+        padding: 10px;  /* Some padding to space things out */
+        margin-top: 5px;  /* Margins for better positioning */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* Subtle box shadow */
+      }
+      
+
+      
+      #timer-container {
+        position: absolute;
+        top: 10px;  /* adjust as needed */
+        left: 30px;  /* adjust as needed */
+      }
+
+      .score-icon {
+        cursor: pointer;
+        width: 150px;
+        border-radius: 35px;
+        /* ...other styles... */
+    }
+    
+    .score-display {
+        font-size: 24px;
+        font-family: 'Georgia', serif; 
+        color: #e80707;
+        text-shadow: 2px 2px 4px #000000;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    #score-container {
+        position: absolute;
+        left: 30px;
+        top: 275px
+        
+          /* Changed to 'right' and adjusted the value */
+    }
+    
+      
+    #time-select {
+        font-size: 17px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #960505;
+        transition: border-color 0.3s;
+      }
+
+      #time-select:focus {
+        border-color: #007bff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #start-timer {
+        background-color: #033468;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: background-color 0.3s;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #start-timer:hover {
+        background-color: #0056b3;
+      }
+
+      #time-options {
+        margin-bottom: 20px;
+      }
+      
+      
+      
+
+      @keyframes confetti {
+        0% { opacity: 1; }
+        100% { transform: translateY(100vh); opacity: 0; }
+      }
+      
+      .confetti {
+        position: fixed;
+        animation: confetti 2s linear infinite;
+        z-index: 1000; /* make sure it's above other elements */
+      }
+      
+      
+#musicOffImg {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 35px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+  top: 175px;
+}

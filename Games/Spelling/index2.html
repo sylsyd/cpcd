@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <audio id="homepageJingle" style="display:none;" controls loop autoplay>
+        <source src="jingle.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+  <!-- Add these icons and associated functions -->
+<!-- Add these icons and associated functions -->
+<div class="icon-container">
+    <img id="musicIcon" src="music.png" onclick="stopMusic()" alt="Stop Music" class="music-icon"/>
+    <img id="menuIcon" src="menu.png" onclick="goToMenu()" alt="Go to Menu" class="menu-icon" style="display:none;"/>
+    <img id="listenIcon" src="listen.png" onclick="playWordSound(correctWord)" alt="Listen" class="listen-icon" style="display:none;"/>
+</div>
+
+
+    
+    <div class="game-container" id="levelContainer">
+        <img id="backgroundImage" src="bg2.png" alt="Background" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;">
+        
+        <!-- Level PNGs -->
+<div class="level-selection" id="levelSelection">
+    <img src="level1.png" alt="Spelling Game - Level 1" onclick="startLevel('spellingGameLevel1')" />
+    <img src="level2.png" alt="Spelling Game - Level 2" onclick="startLevel('spellingGameLevel2')" />
+    <img src="level3.png" alt="Advanced Game - Level 1" onclick="startLevel('advancedGameLevel1')" />
+</div>
+
+<!-- Circular PNGs -->
+<div class="circular-images">
+    <div class="circular-frame">
+        <img src="sylmusic2.png" alt="Sylmusic"/>
+    </div>
+   
+    <div class="circular-frame">
+        <img src="sylcoding.png" alt="Sylcoding"/>
+    </div>
+</div>
+
+        
+        <div class="sentence" id="sentence"></div>
+        <div class="choices" id="choices"></div>
+        <button id="returnButton" class="return-button" onclick="returnToHomepage()" style="display:none;">Return to Homepage</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

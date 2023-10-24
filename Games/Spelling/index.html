@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link href="styles.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body>
+  <audio autoplay="" controls="" id="homepageJingle" loop="" style="display:none;">
+   <source src="jingle2.mp3" type="audio/mp3"/>
+   Your browser does not support the audio element.
+  </audio>
+  <!-- Add these icons and associated functions -->
+  <!-- Add these icons and associated functions -->
+  <div class="icon-container">
+   <img alt="Go to Menu" class="menu-icon" id="menuIcon" onclick="goToMenu()" src="menu.png" style="display:none;"/>
+   <img alt="Listen" class="listen-icon" id="listenIcon" onclick="playWordSound(correctWord)" src="listen.png" style="display:none;"/>
+  </div>
+  <div class="game-container" id="levelContainer">
+   <img alt="Background" id="backgroundImage" src="bg3.png" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1;"/>
+   <!-- Level PNGs -->
+   <div class="level-selection" id="levelSelection">
+    <img alt="Spelling Game - Level 1" onclick="startLevel('spellingGameLevel1')" src="level1.png"/>
+    <img alt="Spelling Game - Level 2" onclick="startLevel('spellingGameLevel2')" src="level2.png"/>
+    <img alt="Advanced Game - Level 1" onclick="startLevel('spellingGameLevel3')" src="level3.png">
+    </img>
+   </div>
+   <!-- Circular PNGs -->
+   <div class="sentence" id="sentence">
+   </div>
+   <div class="choices" id="choices">
+   </div>
+   <div id="timer-container" style="display: none;">
+    <div id="time-options" style="display: none;">
+     <select id="time-select">
+      <option value="30">
+       30s
+      </option>
+      <option value="60">
+       1m
+      </option>
+      <option value="120">
+       2m
+      </option>
+      <option value="180">
+       3m
+      </option>
+      <option value="240">
+       4m
+      </option>
+      <option value="300">
+       5m
+      </option>
+     </select>
+     <button id="start-timer">
+      Start
+     </button>
+    </div>
+    <img class="timer-icon" id="timer-icon" src="timer.png"/>
+    <div class="time-left" id="time-left">
+    </div>
+   </div>
+   <div id="score-container" style="display: none;">
+    <img class="score-icon" id="score-icon" src="score.png"/>
+    <div class="score-display" id="score">
+     0
+    </div>
+   </div>
+   <script src="script.js">
+   </script>
+  </div>
+  <div id="musicOffDiv">
+   <img alt="Music Off" id="musicOffImg" src="musicoff.png" style="display: none;"/>
+  </div>
+ </body>
+</html>

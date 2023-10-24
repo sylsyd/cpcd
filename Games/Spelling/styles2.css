@@ -1,0 +1,224 @@
+/* styles.css */
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-height: 800px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.sentence {
+    position: absolute;
+    font-size: 44px;
+    text-align: center;
+    color: white; 
+    font-family: 'Chalkduster', cursive;
+}
+
+.choices {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.choices img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 25px;
+}
+
+.choices img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.level-selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 19%;
+    padding: 50px 0;
+}
+
+.level-selection img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 0 20px;
+}
+
+.level-selection img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #1c0470;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    font-family: 'Georgia', serif;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.return-button:hover {
+    background-color: #43060e;
+}
+
+.circular-images {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.circular-frame {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.circular-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: saturate(0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.circular-frame img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.stylish-button {
+    font-size: 54px;  
+    background-color: #8da9db;  /* Softer blue */
+    color: white;  
+    padding: 30px 50px;  
+    margin: 200px 0;  
+    border: none;  
+    cursor: pointer;  
+    border-radius: 50px;  /* Rounded corners */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);  /* Softer shadow */
+    display: block;  
+    margin: 510px auto;
+}
+
+.stylish-button:hover {
+    background-color: #f5faf6;
+    color: rgb(11, 11, 11);  
+}
+
+/* Make the image smaller */
+.small-image {
+    width: 375px;
+    margin: 35px 0;
+    border-radius: 12px;  /* Rounded corners */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);  /* Margin */
+    height: auto;
+    display: inline-block;
+    cursor: pointer;  /* <-- Added this line */
+}
+
+/* Stylish submit button */
+#submitButton {
+    font-size: 30px;  /* Reduced font size */
+    background-color: #a02832; 
+    color: white;
+    padding: 10px 14px;  /* Reduced padding */
+    margin: 550px auto;  /* Center the button horizontally */
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+    display: block;  /* Changed to block to stack vertically */
+    width: 200px;
+    height: 50px;  /* Set width */
+    text-align: center;  /* Center the text */
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Center the sentence and choices */
+.sentence, .choices {
+    /* Removed position: absolute; */
+    width: 100%;
+    text-align: center;  /* Center inline or inline-block elements */
+    margin: auto;  /* Auto margins for block level elements */
+}
+
+/* Button clicked state */
+.stylish-button.clicked {
+    background-color: #f5faf6;
+    color: rgb(11, 11, 11);  
+}
+
+.icon-container {
+    position: absolute;
+    right: 20px;
+    top: 310px;
+    z-index: 1;
+    display: flex;  /* Align items horizontally */
+}
+
+/* Common styling for all icons */
+.music-icon, .menu-icon, .listen-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Individual styling for music icon */
+.music-icon {
+    z-index: 1;
+}
+
+/* Individual styling for menu icon */
+.menu-icon {
+    z-index: 1;
+}
+
+/* Individual styling for listen icon */
+.listen-icon {
+    z-index: 1;
+}
+
+/* Hover effect for all icons */
+.music-icon:hover, .menu-icon:hover, .listen-icon:hover {
+    transform: scale(1.1);
+}
+
