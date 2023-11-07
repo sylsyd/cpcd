@@ -212,111 +212,7 @@
         
     }
 
-    .timer-icon {
-        cursor: pointer;
-        width: 150px;
-        border-radius: 35px;
-        /* ...other styles... */
-      }
-      
-      .time-left {
-        font-size: 14px;
-        font-family: 'Georgia', serif; /* You can change this to any font you like */
-        color: #ffffff;  /* White color for better visibility on darker backgrounds */
-        text-shadow: 2px 2px 4px #000000;  /* Adds a slight shadow for readability */
-        background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
-        border-radius: 8px;  /* Rounded corners */
-        padding: 10px;  /* Some padding to space things out */
-        margin-top: 5px;  /* Margins for better positioning */
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* Subtle box shadow */
-      }
-      
-
-      
-      #timer-container {
-        position: absolute;
-        top: 10px;  /* adjust as needed */
-        left: 30px;  /* adjust as needed */
-      }
-
-      .score-icon {
-        cursor: pointer;
-        width: 150px;
-        border-radius: 35px;
-        /* ...other styles... */
-    }
-    
-    .score-display {
-        font-size: 24px;
-        font-family: 'Georgia', serif; 
-        color: #e80707;
-        text-shadow: 2px 2px 4px #000000;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 8px;
-        padding: 10px;
-        margin-top: 5px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    #score-container {
-        position: absolute;
-        left: 30px;
-        top: 275px
-        
-          /* Changed to 'right' and adjusted the value */
-    }
-    
-      
-    #time-select {
-        font-size: 17px;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        background-color: #960505;
-        transition: border-color 0.3s;
-      }
-
-      #time-select:focus {
-        border-color: #007bff;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      #start-timer {
-        background-color: #033468;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 10px 20px;
-        font-size: 20px;
-        cursor: pointer;
-        margin-left: 10px;
-        transition: background-color 0.3s;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      #start-timer:hover {
-        background-color: #0056b3;
-      }
-
-      #time-options {
-        margin-bottom: 20px;
-      }
-      
-      
-      
-
-      @keyframes confetti {
-        0% { opacity: 1; }
-        100% { transform: translateY(100vh); opacity: 0; }
-      }
-      
-      .confetti {
-        position: fixed;
-        animation: confetti 2s linear infinite;
-        z-index: 1000; /* make sure it's above other elements */
-      }
-      
-      
+          
 #musicOffImg {
   cursor: pointer;
   z-index: 1;
@@ -330,4 +226,16 @@
   margin-top: 10px;
   transition: transform 0.3s ease;
   top: 175px;
+}
+
+.action-button {
+  cursor: pointer;
+  margin: 10px;
+  width: 100px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  transition: transform 0.1s ease;
+}
+
+.action-button:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }

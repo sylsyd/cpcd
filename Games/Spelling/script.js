@@ -1,5 +1,3 @@
-let score = 0;
-
 let selectedLetters = [];
 let correctWord = ''; // Initialize as empty string
 let allLetters = []; // Initialize as empty array
@@ -87,6 +85,18 @@ const wordsLevel3 = [
     {word: 'string', imagePath: 'complex/string.png', choices: ['i', 't', 'm', 'r', 'ng', 's']},
     {word: 'swing', imagePath: 'complex/swing.png', choices: ['i', 'u', 'w', 'l', 'ng', 's']},
     {word: 'ring', imagePath: 'complex/ring.png', choices: ['i', 'r', 'j', 'p', 'ng', 's']},
+    {word: 'chimp', imagePath: 'complex/chimp.png', choices: ['i', 'ch', 'j', 'p', 'm', 'e']},
+    {word: 'bench', imagePath: 'complex/bench.png', choices: ['i', 'b', 'n', 'e', 'ng', 'ch']},
+    {word: 'chop', imagePath: 'complex/chop.png', choices: ['ch', 'o', 'u', 'p', 'ng', 'sh']},
+    {word: 'check', imagePath: 'complex/check.png', choices: ['i', 'ch', 'e', 'p', 'ng', 'ck']},
+    {word: 'chick', imagePath: 'complex/chick.png', choices: ['i', 'ch', 'e', 'ck', 'ng', 's']},
+    {word: 'fish', imagePath: 'complex/fish.png', choices: ['i', 'sh', 'j', 'f', 'm', 'e']},
+    {word: 'shed', imagePath: 'complex/shed.png', choices: ['i', 'b', 'd', 'e', 'ng', 'sh']},
+    {word: 'dish', imagePath: 'complex/dish.png', choices: ['ch', 'd', 'u', 'p', 'i', 'sh']},
+    {word: 'brush', imagePath: 'complex/brush.png', choices: ['r', 'ch', 'e', 'b', 'sh', 'u']},
+    {word: 'ship', imagePath: 'complex/ship.png', choices: ['i', 'ch', 'e', 'sh', 'd', 'p']},
+    {word: 'crash', imagePath: 'complex/crash.png', choices: ['c', 'ch', 'r', 'sh', 'a', 'p']},
+
     // Add more words here...
   ];
 
@@ -101,19 +111,47 @@ const wordsLevel3 = [
 // Function to start Level 1
 // Create a copy of the original words array to track remaining words.
 let currentLevel = '';  // Add this line to track the current level
-let remainingWords = [...words];
+let remainingWords = [];
 
+// Shuffle the words at the start of the level
 function startLevel(levelName) {
-    currentLevel = levelName;  // Update the current level here
-    remainingWords = [...levelWords[levelName]];  // Reset remainingWords based on level
+  currentLevel = levelName;
+  // Shuffle the array of words for the current level
+  remainingWords = shuffle([...levelWords[levelName]]);
+  nextWord();
+}
 
-    const randomIndex = Math.floor(Math.random() * remainingWords.length);
-    const selectedWord = remainingWords[randomIndex];    // Remove the selected word from remainingWords
-    remainingWords.splice(randomIndex, 1);
+// Pick the next word from the remaining words without repeating
+function nextWord() {
+  if (remainingWords.length === 0) {
+    // Level is complete
+    console.log("Level finished!");
+    
+    // Display a level completion message
+    document.getElementById('sentence').innerHTML = `<div class="completion-message"></div>`;
+    
+    // Show options for the player
+    document.getElementById('choices').innerHTML = `
+      <img id="replayButton" src="playagain.png" alt="Replay" onclick="startLevel(currentLevel)" class="action-button" />
+      <img id="mainMenuButton" src="menu.png" alt="Main Menu" onclick="goToMenu()" class="action-button" />
+    `;
 
-    correctWord = selectedWord.word;
-    allLetters = selectedWord.choices;
+    // Disable the submit button to prevent further submissions
+    document.getElementById('submitButton').disabled = true;
 
+    // Optionally, play a completion sound or jingle
+    const completionAudio = new Audio('words/completion.mp3');
+    completionAudio.play();
+
+    // Stop any other gameplay logic that may be pending
+    return;
+  }
+
+  // Take the next word from the shuffled list instead of a random one
+  const selectedWord = remainingWords.pop();
+
+  correctWord = selectedWord.word;
+  allLetters = selectedWord.choices;
 
 // Change the background image
 document.getElementById('backgroundImage').src = 'bg4.png';
@@ -130,9 +168,6 @@ document.getElementById('wordImage').addEventListener('click', () => {
 console.log('Image was clicked');
 });
 
-// Add this line when Level 1 starts
-document.getElementById("timer-container").style.display = "block";
-document.getElementById("score-container").style.display = "block";
 
  // Add this line to show the Music Off button when a new level starts
  document.getElementById('musicOffImg').style.display = 'block';
@@ -151,85 +186,74 @@ document.getElementById('menuIcon').style.display = 'block';
 document.getElementById('listenIcon').style.display = 'block';
 }
 
+// Allow letters to be deselected before submitting the answer
 function selectLetter(letter, index) {
-let audio = new Audio(`sounds/${letter}.mp3`);
-audio.play();
-let button = document.getElementById(`letter${index}`);
+  let audio = new Audio(`sounds/${letter}.mp3`);
+  audio.play();
+  let button = document.getElementById(`letter${index}`);
 
-if (button.classList.contains('clicked')) {
-// Undo the click
-const position = selectedLetters.indexOf(letter);
-if (position > -1) {
-selectedLetters.splice(position, 1);
-}
-button.classList.remove('clicked');
-button.disabled = false;
-button.style.backgroundColor = '#31079c'; // Force it back to the original color
-button.style.color = 'white';  // This is the line that is preventing the button from being clicked again
-} else {
-// Perform the click operation
-if (selectedLetters.length < correctWord.length) {
-selectedLetters.push(letter);
-button.classList.add('clicked');
-// Comment out the next line or remove it
-// button.disabled = true;
-}
-}
+  if (button.classList.contains('clicked')) {
+    // Undo the click
+    const position = selectedLetters.indexOf(letter);
+    if (position > -1) {
+      selectedLetters.splice(position, 1);
+    }
+    button.classList.remove('clicked');
+    button.disabled = false;
+    button.style.backgroundColor = '#31079c'; // Revert to the original color
+    button.style.color = 'white';
+  } else {
+    // Perform the click operation
+    if (selectedLetters.length < correctWord.length) {
+      selectedLetters.push(letter);
+      button.classList.add('clicked');
+    }
+  }
 }
 // Array of success audio files
 const successAudios = ['goodonya.mp3', 'ulegend.mp3', 'urockstar.mp3', 'welldone.mp3', 'crushingit.mp3'];
 
 // Function to check the answer
 function checkAnswer() {
-const answer = selectedLetters.join('');
-if (answer === correctWord) {
-// Place the score logic here
-console.log("Correct word detected. Current score before increment: " + score);
-score++;
-document.getElementById("score").textContent = score;
-console.log("Score incremented. New score: " + score);
-selectedLetters = [];  // Reset for the next word
+  const answer = selectedLetters.join('');
+  if (answer === correctWord) {
+    console.log("Correct word detected. Current score before increment: " + score);
+    score++;
+    document.getElementById("score").textContent = score;
+    
+    const randomIndex = Math.floor(Math.random() * successAudios.length);
+    const successAudio = new Audio(`sounds/${successAudios[randomIndex]}`);
+    successAudio.play();
+    // Reset buttons and selections
+    resetButtonsAndSelections();
 
-  // Add confetti effect
-  addConfetti();
+    // Proceed to the next word
+    nextWord();  // This is the corrected line
+  } else {
+    // Incorrect answer logic
+    const incorrectAudio = new Audio('sounds/nahsorry.mp3');
+    incorrectAudio.play();
   
-// Play a random success audio
-const randomIndex = Math.floor(Math.random() * successAudios.length);
-const successAudio = new Audio(`sounds/${successAudios[randomIndex]}`);
-successAudio.play();
-
-// Reset buttons and selections
-resetButtonsAndSelections();
-
- // Start a new level based on the current level
- startLevel(currentLevel);
-} else {
-  const incorrectAudio = new Audio('sounds/nahsorry.mp3');
-  incorrectAudio.play();
-  
-  // Reset buttons and selections - Add this line
-  resetButtonsAndSelections();
-  
-  // Add this line to move to the next word for an incorrect answer
-  startLevel(currentLevel);
-}
+    // Reset buttons and selections to allow retrying the same word
+    resetButtonsAndSelections();
+    // Do not call startLevel to avoid moving to the next word
+  }
 }
 
 // Reset buttons and selections
 function resetButtonsAndSelections() {
-selectedLetters = [];
-allLetters.forEach((_, index) => {
-let button = document.getElementById(`letter${index}`);
-button.disabled = false;
-button.classList.remove('clicked');
-button.style.backgroundColor = '#31079c'; // Force it back to the original color
-button.style.color = 'white'; // Resetting the text color as well
-});
+  selectedLetters = [];
+  allLetters.forEach((_, index) => {
+    let button = document.getElementById(`letter${index}`);
+    button.classList.remove('clicked');
+    button.style.backgroundColor = '#31079c'; // Force it back to the original color
+    button.style.color = 'white'; // Resetting the text color as well
+  });
 }
 
 function playWordSound(word) {
-let audio = new Audio(`words/${word}.mp3`);
-audio.play();
+  let audio = new Audio(`words/${word}.mp3`);
+  audio.play();
 }
 
 // Function to stop jingle.mp3
@@ -245,61 +269,6 @@ window.location.href = 'index.html';
 }
 
 
-
-// Your existing playWordSound function should work as is.
-
-let timeLeft = 20; // 2 minutes in seconds
-let timerInterval;
-
-// Initialize score
-
-
-// New timer logic
-document.getElementById("timer-icon").addEventListener("click", function() {
-  document.getElementById("time-options").style.display = "block";
-});
-
-document.getElementById("start-timer").addEventListener("click", function() {
-  let timeLeft = parseInt(document.getElementById("time-select").value);
-  clearInterval(timerInterval);
-  timerInterval = setInterval(function() {
-    document.getElementById("time-left").innerHTML = `${timeLeft} seconds`;
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      document.getElementById("time-left").innerHTML = "Time's up!";
-    }
-    timeLeft -= 1;
-  }, 1000);
-});
-;
-
-// Function to generate a random color for each confetti piece
-function randomColor() {
-    const colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
-    return colors[Math.floor(Math.random() * colors.length)];
-  }
-  
-  // Add confetti effect when a correct answer is selected
-  function addConfetti() {
-    // Create 10 confetti pieces
-    for (let i = 0; i < 10; i++) {
-      let confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      
-      // Set initial position and other styles for the confetti
-      confetti.style.left = `${Math.random() * 100}vw`;
-      confetti.style.backgroundColor = randomColor(); 
-      
-      // Attach the confetti to the DOM
-      document.body.appendChild(confetti);
-      
-      // Remove the confetti after 2 seconds
-      setTimeout(() => {
-        document.body.removeChild(confetti);
-      }, 2000);
-    }
-  }
-
 // Stop the music when the "musicOffImg" is clicked
 function bindMusicOffEvent() {
   document.getElementById('musicOffImg').addEventListener('click', function() {
@@ -311,4 +280,24 @@ function bindMusicOffEvent() {
 // Bind the music off event after the DOM is fully loaded
 window.addEventListener('DOMContentLoaded', bindMusicOffEvent);
 
-// You can also call bindMusicOffEvent() whenever the game level changes or the DOM is manipulated
+let wordsPlayed = new Set(); // To keep track of words played in the current level
+
+// Function to shuffle words array
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
