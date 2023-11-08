@@ -147,16 +147,16 @@ const levels = {
     { text: 'He is running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/herun' }, 
     { text: 'She is running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/sherun' },
     { text: 'He is not running', options: ['long/herun.png', 'long/sherun.png', 'long/hesit.png', 'long/hesing.png'], correct: 'long/hesit' }, 
-    { text: 'The chick is singing', options: ['long/chicksings.png', 'long/kittysings.png', 'long/ellie.png', 'long/chimp.png'], correct: 'long/chicksings' },
+    { text: 'The chick is singing', options: ['long/chicksings.png', 'long/kittysing.png', 'long/ellie.png', 'long/chimp.png'], correct: 'long/chicksings' },
     { text: 'The chimp is on the drums', options: ['long/chimp.png', 'long/chickdrums.png', 'long/random.png', 'long/random2.png'], correct: 'long/chimp' },
     { text: 'She has a bag of chips', options: ['long/shechips.png', 'long/hechips.png', 'long/random3.png', 'long/burger.png'], correct: 'long/shechips' }, 
     { text: 'She chops a log', options: ['long/shechops.png', 'long/hechops.png', 'long/helog.png', 'long/shelog.png'], correct: 'long/shechops' },
     { text: 'He has a big chin', options: ['long/hechin.png', 'long/shechin.png', 'long/quokka.png', 'long/ellie.png'], correct: 'long/hechin' },
-    { text: 'We are chatting', options: ['long/wechat.png', 'long/wesleep.png', 'long/kittysing.png', 'long/random2.png'], correct: 'long/hesit' },
+    { text: 'We are chatting', options: ['long/wechat.png', 'long/wesleep.png', 'long/kittysing.png', 'long/random2.png'], correct: 'long/wechat' },
     { text: 'The brush is in my dish', options: ['long/brushdish.png', 'long/shrimpdish.png', 'long/sheep.png', 'long/shopship.png'], correct: 'long/brushdish' },
-    { text: 'She has a fish', options: ['long/shefish.png', 'long/shopship.png', 'long/sheship.png', 'long/shopshell.png'], correct: 'long/shefish' },
+    { text: 'She has a fish', options: ['long/hefish.png', 'long/shopship.png', 'long/shefish.png', 'long/shopshell.png'], correct: 'long/shefish' },
     { text: 'The shop sells shells', options: ['long/shopshell.png', 'long/shopship.png', 'long/shrimpshell.png', 'long/sheep.png'], correct: 'long/shopshell' },
-    { text: 'The ship is in the dish', options: ['long/shipdish.png', 'long/shopship.png', 'long/sheship.png', 'long/shopshell.png'], correct: 'long/shipdish' }, 
+    { text: 'She is on the ship', options: ['long/shipdish.png', 'long/fishdish.png', 'long/sheship.png', 'long/shopshell.png'], correct: 'long/sheship' }, 
      ]
 };
 
