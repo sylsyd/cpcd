@@ -96,6 +96,11 @@ const wordsLevel3 = [
     {word: 'brush', imagePath: 'complex/brush.png', choices: ['r', 'ch', 'e', 'b', 'sh', 'u']},
     {word: 'ship', imagePath: 'complex/ship.png', choices: ['i', 'ch', 'e', 'sh', 'd', 'p']},
     {word: 'crash', imagePath: 'complex/crash.png', choices: ['c', 'ch', 'r', 'sh', 'a', 'p']},
+    {word: 'bath', imagePath: 'complex/bath.png', choices: ['b', 'a', 'u', 'p', 'i', 'th']},
+    {word: 'sloth', imagePath: 'complex/sloth.png', choices: ['s', 'th', 'o', 'l', 'f', 'u']},
+    {word: 'moth', imagePath: 'complex/moth.png', choices: ['i', 'm', 'o', 'th', 'n', 'p']},
+    {word: 'path', imagePath: 'complex/path.png', choices: ['p', 'th', 'f', 'sh', 'a', 'p']},
+
 
     // Add more words here...
   ];

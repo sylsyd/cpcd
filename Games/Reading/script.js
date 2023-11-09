@@ -157,6 +157,10 @@ const levels = {
     { text: 'She has a fish', options: ['long/hefish.png', 'long/shopship.png', 'long/shefish.png', 'long/shopshell.png'], correct: 'long/shefish' },
     { text: 'The shop sells shells', options: ['long/shopshell.png', 'long/shopship.png', 'long/shrimpshell.png', 'long/sheep.png'], correct: 'long/shopshell' },
     { text: 'She is on the ship', options: ['long/shipdish.png', 'long/fishdish.png', 'long/sheship.png', 'long/shopshell.png'], correct: 'long/sheship' }, 
+    { text: 'The sloth is in the bath', options: ['long/slothbath.png', 'long/roobath.png', 'long/slothsurf.png', 'long/koalasurf.png'], correct: 'long/slothbath' },
+    { text: 'the moth is on the chimp', options: ['long/mothchimp.png', 'long/mothbench.png', 'long/slothship.png', 'long/slothbench.png'], correct: 'long/mothchimp' },
+    { text: 'The moth is on the bench', options: ['long/mothbench.png', 'long/mothchimp.png', 'long/slothbench.png', 'long/koalasurf.png'], correct: 'long/mothbench' },
+    { text: 'The sloth is on a path', options: ['long/slothpath.png', 'long/slothbench.png', 'long/slothbath.png', 'long/mothbench.png'], correct: 'long/slothpath' }, 
      ]
 };
 
