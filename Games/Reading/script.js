@@ -161,6 +161,7 @@ const levels = {
     { text: 'the moth is on the chimp', options: ['long/mothchimp.png', 'long/mothbench.png', 'long/slothship.png', 'long/slothbench.png'], correct: 'long/mothchimp' },
     { text: 'The moth is on the bench', options: ['long/mothbench.png', 'long/mothchimp.png', 'long/slothbench.png', 'long/koalasurf.png'], correct: 'long/mothbench' },
     { text: 'The sloth is on a path', options: ['long/slothpath.png', 'long/slothbench.png', 'long/slothbath.png', 'long/mothbench.png'], correct: 'long/slothpath' }, 
+    { text: 'He was thick but he is thin.', options: ['long/thickthin.png', 'long/thickthick.png', 'long/thinthin.png', 'long/twindogs.png'], correct: 'long/slothpath' }, 
      ]
 };
 
