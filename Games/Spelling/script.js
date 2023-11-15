@@ -100,6 +100,22 @@ const wordsLevel3 = [
     {word: 'sloth', imagePath: 'complex/sloth.png', choices: ['s', 'th', 'o', 'l', 'f', 'u']},
     {word: 'moth', imagePath: 'complex/moth.png', choices: ['i', 'm', 'o', 'th', 'n', 'p']},
     {word: 'path', imagePath: 'complex/path.png', choices: ['p', 'th', 'f', 'sh', 'a', 'p']},
+    {word: 'seal', imagePath: 'complex/seal.png', choices: ['i', 'sh', 'ea', 'f', 's', 'l']},
+    {word: 'beach', imagePath: 'complex/beach.png', choices: ['ea', 'b', 'ch', 'i', 'ng', 'sh']},
+    {word: 'peach', imagePath: 'complex/peach.png', choices: ['ch', 'd', 'ea', 'p', 'i', 'sh']},
+    {word: 'sheep', imagePath: 'complex/sheep.png', choices: ['p', 'ch', 'ee', 'b', 'sh', 'u']},
+    {word: 'bee', imagePath: 'complex/bee.png', choices: ['b', 'ch', 'ee', 'sh', 'd', 'p']},
+    {word: 'sleep', imagePath: 'complex/sleep.png', choices: ['s', 'l', 'i', 'sh', 'ee', 'p']},
+    {word: 'crayon', imagePath: 'complex/crayon.png', choices: ['c', 'ay', 'r', 'p', 'o', 'n']},
+    {word: 'spray', imagePath: 'complex/spray.png', choices: ['s', 'th', 'r', 'p', 'ay', 'u']},
+    {word: 'tray', imagePath: 'complex/tray.png', choices: ['i', 't', 'e', 'th', 'r', 'ay']},
+    {word: 'fla_em', imagePath: 'complex/flame.png', choices: ['e', 'l', 'f', 'm', 'a_e', 'p']},
+    {word: 'pla_en', imagePath: 'complex/plane.png', choices: ['e', 'a_e', 'l', 'p', 'n', 'p']},
+    {word: 'gra_ep', imagePath: 'complex/grape.png', choices: ['s', 'r', 'g', 'p', 'i', 'a_e']},
+    {word: 'rain', imagePath: 'complex/rain.png', choices: ['c', 'ai', 'r', 'p', 'o', 'n']},
+    {word: 'brain', imagePath: 'complex/brain.png', choices: ['n', 'b', 'r', 'p', 'ai', 'u']},
+    {word: 'train', imagePath: 'complex/train.png', choices: ['i', 'n', 'e', 't', 'r', 'ai']},
+    {word: 'snail', imagePath: 'complex/snail.png', choices: ['e', 's', 'l', 'n', 'ai', 'p']},
 
 
     // Add more words here...
