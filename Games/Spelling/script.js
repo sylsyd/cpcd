@@ -111,7 +111,7 @@ const wordsLevel3 = [
     {word: 'tray', imagePath: 'complex/tray.png', choices: ['i', 't', 'e', 'th', 'r', 'ay']},
     {word: 'tail', imagePath: 'complex/tail.png', choices: ['e', 'l', 'f', 'm', 'ai', 't']},
     {word: 'sail', imagePath: 'complex/plane.png', choices: ['e', 's', 'l', 'ai', 'n', 'p']},
-    {word: 'mail', imagePath: 'complex/grape.png', choices: ['l', 'n', 'm', 'p', 'e', 'ai']},
+    {word: 'mail', imagePath: 'complex/mail.png', choices: ['l', 'n', 'm', 'p', 'e', 'ai']},
     {word: 'rain', imagePath: 'complex/rain.png', choices: ['c', 'ai', 'r', 'p', 'o', 'n']},
     {word: 'brain', imagePath: 'complex/brain.png', choices: ['n', 'b', 'r', 'p', 'ai', 'u']},
     {word: 'train', imagePath: 'complex/train.png', choices: ['i', 'n', 'e', 't', 'r', 'ai']},
