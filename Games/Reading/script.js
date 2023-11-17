@@ -182,6 +182,8 @@ const levels = {
     { text: 'A plane is on the way', options: ['long/gateway.png', 'long/planeway.png', 'long/grapeway.png', 'long/flameway.png'], correct: 'long/planeway' },
     { text: 'A snail in jail', options: ['long/snailjail.png', 'long/snailrain.png', 'long/snailtrain.png', 'long/snailmail.png'], correct: 'long/snailjail' }, 
     { text: 'A snail getting his mail', options: ['long/snailjail.png', 'long/snailrain.png', 'long/snailtrain.png', 'long/snailmail.png'], correct: 'long/snailmail' }, 
+    { text: 'I can speak Spanish', options: ['long/speakspanish.png', 'long/speakfrench.png', 'long/speakenglish.png', 'long/speakitalian.png'], correct: 'long/speakspanish' }, 
+    { text: 'I can speak French', options: ['long/speakspanish.png', 'long/speakfrench.png', 'long/speakenglish.png', 'long/speakitalian.png'], correct: 'long/speakfrench' }, 
      ]
 };
 
