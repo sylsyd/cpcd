@@ -116,6 +116,13 @@ const wordsLevel3 = [
     {word: 'brain', imagePath: 'complex/brain.png', choices: ['n', 'b', 'r', 'p', 'ai', 'u']},
     {word: 'train', imagePath: 'complex/train.png', choices: ['i', 'n', 'e', 't', 'r', 'ai']},
     {word: 'snail', imagePath: 'complex/snail.png', choices: ['e', 's', 'l', 'n', 'ai', 'p']},
+    {word: 'shy', imagePath: 'complex/shy.png', choices: ['e', 'sh', 'i', 'y(long)', 'ai', 'p']},
+    {word: 'spy', imagePath: 'complex/spy.png', choices: ['e', 's', 'l', 'y(long)', 'ai', 'p']},
+    {word: 'night', imagePath: 'complex/night.png', choices: ['e', 'i', 'igh', 'n', 'ai', 't']},
+    {word: 'fight', imagePath: 'complex/fight.png', choices: ['t', 'f', 'l', 'n', 'ai', 'igh']},
+    {word: 'sky', imagePath: 'complex/sky.png', choices: ['e', 's', 'y(long)', 'k', 'ai', 'p']},
+    {word: 'tie', imagePath: 'complex/tie.png', choices: ['e', 't', 'ie', 'n', 'ai', 'p']},
+    {word: 'pie', imagePath: 'complex/pie.png', choices: ['e', 's', 'l', 'ie', 'ai', 'p']},
 
 
     // Add more words here...
