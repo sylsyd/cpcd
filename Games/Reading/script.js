@@ -196,10 +196,10 @@ const levels = {
     { text: 'The sheep is high in the sky', options: ['long/flysky.png', 'long/sheepsky.png', 'long/snailsky.png', 'long/chimpsky.png'], correct: 'long/sheepsky' }, 
     { text: 'The seal wants to try and fly', options: ['long/sealfly.png', 'long/sealspy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealfly' },  
     { text: 'The seal is shy', options: ['long/sealfly.png', 'long/sealshy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealshy' },
-    { text: 'The seal is sad and wants to cry', options: ['long/sealfly.png', 'long/sealshy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealcry' },
-    { text: 'The seal is a spy', options: ['long/sealfly.png', 'long/sealshy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealspy' }, 
+    { text: 'The seal is sad and wants to cry', options: ['long/sealfly.png', 'long/sealspy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealcry' },
+    { text: 'The seal is a spy', options: ['long/sealfly.png', 'long/sealspy.png', 'long/sealcry.png', 'long/sealshy.png'], correct: 'long/sealspy' }, 
     { text: 'I see the day and the night.', options: ['long/daynight.png', 'long/brightlight.png', 'long/sealcry.png', 'long/flysky.png'], correct: 'long/daynight' },
-    { text: 'The light is bright', options: ['long/brightlight.png', 'long/daynight.png', 'long/sealcry.png', 'long/sealfly.png'], correct: 'long/sheepbike' },         
+    { text: 'The light is bright', options: ['long/brightlight.png', 'long/daynight.png', 'long/sealcry.png', 'long/sealfly.png'], correct: 'long/brightlight' },         
      ]
 };
 
